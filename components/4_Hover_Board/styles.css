@@ -1,0 +1,48 @@
+body {
+    background-color: #000;
+}
+
+
+h1,h2,p {
+    margin: 20px auto;
+    text-align: center;
+    color: #FFF;
+    font-size: 30px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+p {
+    font-size: 15px;
+}
+
+.hover-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    margin: auto;
+    max-width: 250px;
+}
+
+
+
+
+.board-element {
+    box-sizing: border-box;
+    margin: 2px;
+    height: 20px;
+    width: 20px;
+    box-shadow: 0 0 2px #000;
+    background: #1d1d1d;
+    /*transition: 1s ease-in;*/
+    /*transition-duration: 1s;*/
+
+}
+
+
+.board-element:hover {
+    /*transition-duration: 0s;*/
+}

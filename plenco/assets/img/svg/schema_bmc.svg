@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180.203" height="88.932" viewBox="0 0 180.203 88.932">
+  <g id="Сгруппировать_21" data-name="Сгруппировать 21" transform="translate(-115.797 -2518.366)">
+    <text id="CH2-OH2" transform="translate(245 2540.366)" fill="#005498" font-size="12" font-family="Play-Bold, Play" font-weight="700" letter-spacing="0.05em"><tspan x="0" y="11">CH</tspan><tspan y="11" font-size="7" baseline-shift="-3.9995999620726357">2</tspan><tspan y="11">-OH</tspan><tspan y="11" font-size="7" baseline-shift="-3.9995999620726357">2</tspan></text>
+    <text id="OH" transform="translate(115.797 2518.366)" fill="#005498" font-size="12" font-family="Play-Bold, Play" font-weight="700" letter-spacing="0.05em"><tspan x="78.066" y="11">OH</tspan></text>
+    <g id="Сгруппировать_17" data-name="Сгруппировать 17" transform="translate(173.256 2533.13)">
+      <path id="Контур_38" data-name="Контур 38" d="M48.128,0H16.043L0,27.787,16.043,55.573H48.128L64.171,27.787Z" transform="translate(0 73.013) rotate(-90)" fill="none" stroke="#005498" stroke-miterlimit="10" stroke-width="2"/>
+      <line id="Линия_40" data-name="Линия 40" y1="6.543" x2="10.632" transform="translate(55.812 17.992)" fill="none" stroke="#005498" stroke-width="2"/>
+      <line id="Линия_41" data-name="Линия 41" y1="8.996" transform="translate(28.006)" fill="none" stroke="#005498" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

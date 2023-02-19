@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="150.226" height="88.932" viewBox="0 0 150.226 88.932">
+  <g id="Сгруппировать_19" data-name="Сгруппировать 19" transform="translate(-172.256 -2518.366)">
+    <text id="CH2" transform="translate(233 2534.366)" fill="#005498" font-size="12" font-family="Play-Bold, Play" font-weight="700" letter-spacing="0.05em"><tspan x="6.92" y="11">CH</tspan><tspan y="11" font-size="7" baseline-shift="-3.9995999620726357">2</tspan></text>
+    <text id="OH" transform="translate(190 2518.366)" fill="#005498" font-size="12" font-family="Play-Bold, Play" font-weight="700" letter-spacing="0.05em"><tspan x="3.464" y="11">OH</tspan></text>
+    <text id="OH-2" data-name="OH" transform="translate(280 2518.366)" fill="#005498" font-size="12" font-family="Play-Bold, Play" font-weight="700" letter-spacing="0.05em"><tspan x="5.464" y="11">OH</tspan></text>
+    <g id="Сгруппировать_17" data-name="Сгруппировать 17" transform="translate(173.256 2533.13)">
+      <path id="Контур_38" data-name="Контур 38" d="M15.465-1h33.24l16.62,28.787L48.705,56.573H15.465L-1.155,27.787ZM47.551,1H16.62L1.155,27.787,16.62,54.573H47.551L63.016,27.787Z" transform="translate(0 73.013) rotate(-90)" fill="#005498"/>
+      <path id="Линия_40" data-name="Линия 40" d="M.524,7.394l-1.048-1.7L10.108-.852l1.048,1.7Z" transform="translate(55.812 17.992)" fill="#005498"/>
+      <path id="Линия_41" data-name="Линия 41" d="M1,9H-1V0H1Z" transform="translate(28.006)" fill="#005498"/>
+    </g>
+    <g id="Сгруппировать_18" data-name="Сгруппировать 18" transform="translate(255.039 2533.13)">
+      <path id="Контур_38-2" data-name="Контур 38" d="M48.705,56.573H15.465L-1.155,27.787,15.465-1h33.24l16.62,28.787Zm-32.085-2H47.551L63.016,27.787,47.551,1H16.62L1.155,27.787Z" transform="translate(10.87 73.013) rotate(-90)" fill="#005498"/>
+      <path id="Линия_40-2" data-name="Линия 40" d="M10.108,7.394-.524.852.524-.852,11.156,5.691Z" transform="translate(0 17.992)" fill="#005498"/>
+      <path id="Линия_41-2" data-name="Линия 41" d="M1,9H-1V0H1Z" transform="translate(38.438)" fill="#005498"/>
+    </g>
+  </g>
+</svg>

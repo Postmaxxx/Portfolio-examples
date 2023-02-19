@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="description" content="A demo of how to use gulp-twig"/>
+    <meta name="author" content="Simon de Turck"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="./assets/css/bundle.css">
+     
+    <title>Melamine-Phenolic Molding Materials Cost Parameters</title>
+</head>
+
+<body class="body_mp-mm-cost-param">
+
+    <div class="layout__line_center position-fixed"></div>
+    <div class="layout__line_bottom d-md-none position-fixed"></div>
+    <div class="block_cookies collapse bg-grey-2 w-100 position-fixed py-3" data-obj="block_cookies" data-bs-toggle="false">
+    <div class="block_cookies__content container d-flex flex-column flex-md-row px-4">
+        <p class="block_cookies__text text_add col-md-8 col-lg-10 mb-3 mb-md-0 text-center text-md-start">Cookies make our site work properly and securely. By allowing us, you will 
+            get the best user experience with brand enriched content & relevant products and services. 
+        <a class="block_cookies__link text-black-1 d-block d-md-inline" href="#">More information about Cookies.</a></p>
+            
+        <div class="block_cookies__decisions ms-auto me-auto me-md-0 d-flex justify-content-center justify-content-md-between align-items-center">
+            <button class="block_cookies__btn_accept btn_cookies text-uppercase text-blue-1 ms-md-4" id="cookies_accept" data-cookieaction="accept">accept</button>
+            <button class="block_cookies__btn_close btn_cookies text-black-1 text-decoration-underline ms-4 me-4 me-xl-0" id="cookies_deny" data-cookieaction="deny">Close</button>
+        </div>
+    </div>
+    <img class="block_cookies__close d-none d-md-block col-6 col-md btn_cookies position-absolute" src="./assets/img/svg/close.svg" id="cookies_close" data-cookieaction="close">
+
+</div>
+
+    
+    <header class="header">
+    <nav class="navbar navbar-expand-md d-none d-md-flex bg-blue-l1">
+  <div class="container">
+    <div class="navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-0">
+        <li class="nav-item px-0">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item px-0">
+          <a class="nav-link text-nowrap px-0" href="facility.html">Facility</a>
+        </li>
+        <li class="nav-item px-0">
+          <a class="nav-link text-nowrap px-0" href="research-development.html">Research & Development</a>
+        </li>
+        <li class="nav-item px-0">
+          <a class="nav-link text-nowrap px-0" href="news-blog.html">News</a>
+        </li>
+        <li class="nav-item px-0">
+          <a class="nav-link text-nowrap px-0" href="certifications.html">Certifications</a>
+        </li>
+        <li class="nav-item px-0">
+          <a class="nav-link text-nowrap px-0" href="careers.html">Careers</a>
+        </li>
+
+        
+        <li class="nav-item">
+            <a class="nav-link d-flex align-items-center navbtn px-0" role="button" id="nav_top__btn_search" data-navbtn="nav-section_search">Search
+              <img src="./assets/img/svg/nav_top__search-icon.svg" class="m-0 ps-2" />
+            </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    
+
+
+
+
+    
+
+
+<div class="nav_bottom__btn position-absolute d-none d-xl-block end-0 p-0">
+    <button type="button" class="navbtn button_yellow_nav" data-navbtn="contact_modal">contact</button> 
+
+</div>
+
+
+<div class="row nav_bottom">
+    <div class="nav_bottom_menu-wrap col p-0 bg-white-1">
+        <div class="nav_bottom_menu container cont-site d-flex align-items-center justify-content-between px-0">
+            <a href="home.html"><img class="nav_bottom__logo" src="./assets/img/svg/logo_plenco_blue.svg" alt="Plenco Logo" ></a>
+            <div class="nav_bottom__links d-none d-md-flex align-items-center justify-content-between ms-0 ms-xl-4">
+                <div class="nav_bottom__link-cont d-flex align-items-center cursor-pointer navbtn text-center text-xl-start" role="button" data-navbtn="nav-section_markets" data-navbtnSelectable>
+                    <p class="nav_bottom__link text-uppercase text-black-1 m-0">Markets & Applications</p> 
+                </div>
+                <div class="nav_bottom__link-cont d-flex align-items-center cursor-pointer navbtn" role="button" data-navbtn="nav-section_products" data-navbtnSelectable>
+                    <p class="nav_bottom__link text-uppercase text-black-1 m-0" >products</p> 
+                </div>
+                <div class="nav_bottom__link-cont d-flex align-items-center position-relative">
+                    <a href="reports-resources.html" class="nav_bottom__link text-uppercase text-black-1 m-0 stretched-link">Reports & Resources</a>    
+                </div>
+                <div class="nav_bottom__btn_yellow d-inline-block d-xl-none p-0 ms-4">
+                    <button  type="button" class="navbtn button_yellow_nav text-uppercase text-black-1" data-navbtn="contact_modal"> contact</button>
+                </div>
+
+            </div>
+
+            <div class="nav_bottom__btn_mob d-inline-block d-md-none d-xl-none navbtn ms-4 p-0 h-100" role="button" data-navbtn="mob_main">
+                <button class="button_yellow_nav_mob d-flex flex-column justify-content-end" data-obj="nav__btn_mob">
+                    <div class="button_yellow_nav_mob__top_left button_yellow_nav_mob_anim position-absolute bg-black-1"></div>
+                    <div class="button_yellow_nav_mob__top_right button_yellow_nav_mob_anim position-absolute bg-black-1"></div>
+                    <div class="button_yellow_nav_mob__middle position-absolute bg-black-1"></div>
+                    <div class="button_yellow_nav_mob__bottom_left button_yellow_nav_mob_anim position-absolute bg-black-1"></div>
+                    <div class="button_yellow_nav_mob__bottom_right button_yellow_nav_mob_anim position-absolute bg-black-1"></div>
+                    <div class="button_yellow_nav_mob__text-cont d-block overflow-hidden">
+                        <span class="button_yellow_nav_mob__text_1 uppercase d-block text-black-1">menu</span>
+                        <span class="button_yellow_nav_mob__text_2 uppercase d-block text-black-1">exit</span>
+                    </div>
+                </button> 
+            </div>
+
+        </div>
+    </div>
+
+
+    
+
+
+    <div class="nav_bottom__drop__cont position-relative overflow-hidden mx-0 px-0 bg-transparent">
+        <div class="nav_bottom__drop overflow-hidden position-relative collapse px-0 top-0" data-obj="nav_bottom__drop_main" data-bs-toggle="false" data-nav-collapsed>
+            <div class="nav_bottom__drop__cont-1 overflow-hidden cont-site bg-blue-l1">
+                <div class="nav_bottom__drop__input-block col-12 d-flex align-items-center position-relative">
+                    <div class="nav_bottom__drop__input-cont col-12 d-flex justify-content-between align-items-center border-bottom border-2 border-blue-2">
+                        <input type="text" class="nav_bottom__drop__input h-100 ps-2 col bg-transparent" placeholder="Search">
+                        <button class="nav_bottom__drop__input-btn mx-3"></button>
+                    </div>
+                </div>
+
+                <div class="nav_bottom__drop__block_1 mb-3" id="nav_bottom__drop__block_1">
+                    <a role="button" class="nav_bottom__btn_1 nav_bottom__btn_resources bg-blue-1 navbtn col-12 text-uppercase mt-2 text-white-1 d-flex align-items-center justify-content-center mt-2" data-obj="nav_bottom__btn_markets" type="button" data-navbtn="nav_bottom__drop_markets"  data-nav-collapsed>Markets & Applications</a>
+                    <a role="button" class="nav_bottom__btn_1 nav_bottom__btn_products bg-blue-1 navbtn col-12 text-uppercase text-white-1 d-flex align-items-center justify-content-center mt-3" data-obj="nav_bottom__btn_products" type="button" data-navbtn="nav_bottom__drop_products" data-nav-collapsed>Products</a>
+                    <a href="reports-resources.html" class="nav_bottom__btn_1 col-12 text-uppercase bg-blue-1 text-white-1 d-flex align-items-center justify-content-center mt-3">Reports & Resources</a>
+                    <button  type="button" class="navbtn nav_bottom__btn_1 nav_bottom__btn_1_spec bg-yellow-1 col-12 text-uppercase text-black-1 position-relative d-flex align-items-center justify-content-center text-black-1 mt-3" data-navbtn="contact_modal">contact</button>
+
+                </div>
+            </div>
+
+            <div class="nav_bottom__drop__cont-2 cont-site bg-blue-3">
+                <div class="nav_bottom__drop__block_2 row row-cols-2 g-2 mt-0" id="nav_bottom__drop__block-2">
+                    <div class="nav_bottom__btn_2-wrap">
+                        <a href="about.html" class="nav_bottom__btn_2 text-white-1 bg-transparent d-flex align-items-center justify-content-center text-capitalize border border-2 border-blue-1">About</a>
+                    </div>
+                    <div class="nav_bottom__btn_2-wrap">
+                        <a href="facility.html" class="nav_bottom__btn_2 text-white-1 bg-transparent d-flex align-items-center justify-content-center text-capitalize border border-2 border-blue-1">Facility</a>
+                    </div>
+                    <div class="nav_bottom__btn_2-wrap">
+                        <a href="research-development.html" class="nav_bottom__btn_2 text-white-1 bg-transparent d-flex align-items-center justify-content-center text-capitalize border border-2 border-blue-1">Research & Development</a>
+                    </div>
+                    <div class="nav_bottom__btn_2-wrap">
+                        <a href="news-blog.html" class="nav_bottom__btn_2 text-white-1 bg-transparent d-flex align-items-center justify-content-center text-capitalize border border-2 border-blue-1">News</a>
+                    </div>
+                    <div class="nav_bottom__btn_2-wrap">
+                        <a href="certifications.html" class="nav_bottom__btn_2 text-white-1 bg-transparent d-flex align-items-center justify-content-center text-capitalize border border-2 border-blue-1">Certifications</a>
+                    </div>
+                    <div class="nav_bottom__btn_2-wrap">
+                        <a href="careers.html" class="nav_bottom__btn_2 text-white-1 bg-transparent d-flex align-items-center justify-content-center text-capitalize border border-2 border-blue-1">Careers</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav__drop__opacity-block col-12 m-0 p-0 opacity-75 bg-blue-3"></div>
+
+        </div>
+
+
+
+
+        <div class="overflow-hidden position-relative collapse" data-bs-toggle="false" data-obj="nav_bottom__drop_markets" data-nav-collapsed>
+            <div class="nav_bottom__drop__back cont-site d-flex align-items-center navbtn col-12 left-0 bg-blue-l1" type="button" data-navbtn="mob_back">
+                <div class="nav_bottom__drop__back__arrow position-relative bg-blue-1"></div>
+                <p class="nav_bottom__drop__back__text my-0 ms-3 text-black-1">Back to the Main Menu</p>    
+            </div>
+            <div class="nav_bottom__drop__cont-add-menu cont-site overflow-hidden m-0 bg-blue-3 pb-4" id="nav_bottom__markets">
+                <div class="nav_bottom__drop__cont-add-menu-wrap">
+                    <h2 class="nav_bottom__drop__add-menu__header text-white-1 mb-0 text-uppercase">Markets & Applications</h2>
+                    <div class="nav_bottom__drop__add-menu__links d-flex flex-column mt-3">
+                        
+                            <div class="wrapper position-relative">
+                                <div class="nav_bottom__drop__add-menu__link-cont col-12 py-2 d-flex justify-content-between align-items-center border-bottom border-2 border-blue-1">
+                                    <p class="nav_bottom__drop__add-menu__link_text text-capitalize my-0 text-start text-white-1">Automotive</p>
+                                    <div class="nav_bottom__drop__add-menu__arrow position-relative bg-yellow-1"></div>
+                                </div>
+                                <a href=automotive.html class="stretched-link"></a>
+                            </div>
+                        
+                            <div class="wrapper position-relative">
+                                <div class="nav_bottom__drop__add-menu__link-cont col-12 py-2 d-flex justify-content-between align-items-center border-bottom border-2 border-blue-1">
+                                    <p class="nav_bottom__drop__add-menu__link_text text-capitalize my-0 text-start text-white-1">Electrical Insulation</p>
+                                    <div class="nav_bottom__drop__add-menu__arrow position-relative bg-yellow-1"></div>
+                                </div>
+                                <a href=electrical-insulation.html class="stretched-link"></a>
+                            </div>
+                        
+                            <div class="wrapper position-relative">
+                                <div class="nav_bottom__drop__add-menu__link-cont col-12 py-2 d-flex justify-content-between align-items-center border-bottom border-2 border-blue-1">
+                                    <p class="nav_bottom__drop__add-menu__link_text text-capitalize my-0 text-start text-white-1">Home & Commercial Kitchen</p>
+                                    <div class="nav_bottom__drop__add-menu__arrow position-relative bg-yellow-1"></div>
+                                </div>
+                                <a href=home-commercial.html class="stretched-link"></a>
+                            </div>
+                        
+                            <div class="wrapper position-relative">
+                                <div class="nav_bottom__drop__add-menu__link-cont col-12 py-2 d-flex justify-content-between align-items-center border-bottom border-2 border-blue-1">
+                                    <p class="nav_bottom__drop__add-menu__link_text text-capitalize my-0 text-start text-white-1">Small Engine</p>
+                                    <div class="nav_bottom__drop__add-menu__arrow position-relative bg-yellow-1"></div>
+                                </div>
+                                <a href=small-engine.html class="stretched-link"></a>
+                            </div>
+                        
+                            <div class="wrapper position-relative">
+                                <div class="nav_bottom__drop__add-menu__link-cont col-12 py-2 d-flex justify-content-between align-items-center border-bottom border-2 border-blue-1">
+                                    <p class="nav_bottom__drop__add-menu__link_text text-capitalize my-0 text-start text-white-1">Lighting</p>
+                                    <div class="nav_bottom__drop__add-menu__arrow position-relative bg-yellow-1"></div>
+                                </div>
+                                <a href=lighting.html class="stretched-link"></a>
+                            </div>
+                        
+                            <div class="wrapper position-relative">
+                                <div class="nav_bottom__drop__add-menu__link-cont col-12 py-2 d-flex justify-content-between align-items-center border-bottom border-2 border-blue-1">
+                                    <p class="nav_bottom__drop__add-menu__link_text text-capitalize my-0 text-start text-white-1">Oil & Gas</p>
+                                    <div class="nav_bottom__drop__add-menu__arrow position-relative bg-yellow-1"></div>
+                                </div>
+                                <a href=oil-gas.html class="stretched-link"></a>
+                            </div>
+                        
+                    </div>
+                </div>
+                <a href="markets-applications.html" class="btn btn-yellow-1 nav_bottom__drop__add-menu__button w-100 p-3 h-auto" id="nav_bottom__view-markets">View All<br>Markets & Applications</a>
+            </div>
+            <div class="nav__drop__opacity-block col-12 m-0 p-0 opacity-75 bg-blue-3"></div>
+        </div>
+
+
+        <div class="overflow-hidden position-relative collapse" data-bs-toggle="false" data-obj="nav_bottom__drop_products" data-nav-collapsed>
+            <div class="nav_bottom__drop__back cont-site d-flex align-items-center navbtn col-12 left-0 bg-blue-l1" type="button" data-navbtn="mob_back">
+                <div class="nav_bottom__drop__back__arrow position-relative bg-blue-1"></div>
+                <p class="nav_bottom__drop__back__text my-0 ms-3 text-black-1">Back to the Main Menu</p>    
+            </div>
+            <div class="nav_bottom__drop__cont-add-menu cont-site pb-4 bg-blue-3 overflow-hidden m-0 d-flex flex-column justify-content-between" id="nav_bottom__products">
+                <div class="nav_bottom__drop__cont-add-menu-wrap">
+                    <h2 class="nav_bottom__drop__add-menu__header mb-0 text-white-1 text-uppercase">Plenco’s Products</h2>
+                    <div class="nav_bottom__drop__add-menu__links d-flex flex-column mt-3">
+                        
+                        <div class="wrapper position-relative">
+                            <div class="nav_bottom__drop__add-menu__link-cont py-2 col-12 d-flex justify-content-between align-items-center border-bottom border-2 border-blue-1">
+                                <p class="nav_bottom__drop__add-menu__link_text text-capitalize my-0 text-start text-white-1">Phenolic Novolac & Resol Resins</p>
+                                <div class="nav_bottom__drop__add-menu__arrow position-relative"></div>
+                            </div>
+                            <a href=pn-rr.html class="stretched-link"></a>
+                        </div>
+                        
+                        <div class="wrapper position-relative">
+                            <div class="nav_bottom__drop__add-menu__link-cont py-2 col-12 d-flex justify-content-between align-items-center border-bottom border-2 border-blue-1">
+                                <p class="nav_bottom__drop__add-menu__link_text text-capitalize my-0 text-start text-white-1">Phenolic Molding Materials</p>
+                                <div class="nav_bottom__drop__add-menu__arrow position-relative"></div>
+                            </div>
+                            <a href=pmc.html class="stretched-link"></a>
+                        </div>
+                        
+                        <div class="wrapper position-relative">
+                            <div class="nav_bottom__drop__add-menu__link-cont py-2 col-12 d-flex justify-content-between align-items-center border-bottom border-2 border-blue-1">
+                                <p class="nav_bottom__drop__add-menu__link_text text-capitalize my-0 text-start text-white-1">BMC/ Thermoset Polyester Molding Materials</p>
+                                <div class="nav_bottom__drop__add-menu__arrow position-relative"></div>
+                            </div>
+                            <a href=bmc.html class="stretched-link"></a>
+                        </div>
+                        
+                        <div class="wrapper position-relative">
+                            <div class="nav_bottom__drop__add-menu__link-cont py-2 col-12 d-flex justify-content-between align-items-center border-bottom border-2 border-blue-1">
+                                <p class="nav_bottom__drop__add-menu__link_text text-capitalize my-0 text-start text-white-1">Melamine-Phenolic Molding Materials</p>
+                                <div class="nav_bottom__drop__add-menu__arrow position-relative"></div>
+                            </div>
+                            <a href=mp-mm.html class="stretched-link"></a>
+                        </div>
+                        
+                    </div>
+                </div>
+                <a href="products.html" class="btn btn-yellow-1 nav_bottom__drop__add-menu__button w-100 p-3 h-auto" id="nav_bottom__view-products">View All products</a>
+            </div>
+            <div class="nav__drop__opacity-block col-12 m-0 p-0 opacity-75 bg-blue-3"></div>
+        </div>
+
+        
+    </div>
+
+
+
+
+
+
+
+
+
+
+    
+
+    <div class="nav-section_markets bg-blue-3 overflow-hidden collapse col-12 position-fixed" data-obj="nav-section_markets" data-bs-toggle="false" data-nav-collapsed>
+        <div class="container">
+            <h2 class="nav-section_markets__header mb-0 text-white-1 text-uppercase">Markets & Applications</h2>
+            <div class="nav-section_markets__items row d-flex justify-content-between flex-wrap mt-4 gy-4 mx-n3">
+                
+                    <div class="nav-section_markets__item-wrap col-4 px-3 text-white-1 position-relative">
+                        <div class="nav-section_markets__item bg-blue-1 d-flex align-items-center px-3 mb-0">
+                            <img src=./assets/img/svg/tyre.svg alt=Automotive class="nav-section_markets__item__icon">
+                            <h2 class="nav-section_markets__item__text text-capitalize ms-4 mb-0">Automotive</h2>
+                            <a href=automotive.html class="stretched-link"></a>
+                        </div>
+                    </div>
+                
+                    <div class="nav-section_markets__item-wrap col-4 px-3 text-white-1 position-relative">
+                        <div class="nav-section_markets__item bg-blue-1 d-flex align-items-center px-3 mb-0">
+                            <img src=./assets/img/svg/bolt.svg alt=Electrical Insulation class="nav-section_markets__item__icon">
+                            <h2 class="nav-section_markets__item__text text-capitalize ms-4 mb-0">Electrical Insulation</h2>
+                            <a href=electrical-insulation.html class="stretched-link"></a>
+                        </div>
+                    </div>
+                
+                    <div class="nav-section_markets__item-wrap col-4 px-3 text-white-1 position-relative">
+                        <div class="nav-section_markets__item bg-blue-1 d-flex align-items-center px-3 mb-0">
+                            <img src=./assets/img/svg/pot.svg alt=Home & Commercial Kitchen class="nav-section_markets__item__icon">
+                            <h2 class="nav-section_markets__item__text text-capitalize ms-4 mb-0">Home & Commercial Kitchen</h2>
+                            <a href=home-commercial.html class="stretched-link"></a>
+                        </div>
+                    </div>
+                
+                    <div class="nav-section_markets__item-wrap col-4 px-3 text-white-1 position-relative">
+                        <div class="nav-section_markets__item bg-blue-1 d-flex align-items-center px-3 mb-0">
+                            <img src=./assets/img/svg/v-engine.svg alt=Small Engine class="nav-section_markets__item__icon">
+                            <h2 class="nav-section_markets__item__text text-capitalize ms-4 mb-0">Small Engine</h2>
+                            <a href=small-engine.html class="stretched-link"></a>
+                        </div>
+                    </div>
+                
+                    <div class="nav-section_markets__item-wrap col-4 px-3 text-white-1 position-relative">
+                        <div class="nav-section_markets__item bg-blue-1 d-flex align-items-center px-3 mb-0">
+                            <img src=./assets/img/svg/light-bulb.svg alt=Lighting class="nav-section_markets__item__icon">
+                            <h2 class="nav-section_markets__item__text text-capitalize ms-4 mb-0">Lighting</h2>
+                            <a href=lighting.html class="stretched-link"></a>
+                        </div>
+                    </div>
+                
+                    <div class="nav-section_markets__item-wrap col-4 px-3 text-white-1 position-relative">
+                        <div class="nav-section_markets__item bg-blue-1 d-flex align-items-center px-3 mb-0">
+                            <img src=./assets/img/svg/valve.svg alt=Oil & Gas class="nav-section_markets__item__icon">
+                            <h2 class="nav-section_markets__item__text text-capitalize ms-4 mb-0">Oil & Gas</h2>
+                            <a href=oil-gas.html class="stretched-link"></a>
+                        </div>
+                    </div>
+                
+            </div>
+            <a href="markets-applications.html" class="btn btn-yellow-1 nav-section_markets__button col-6 mx-auto px-3" id="nav-section_markets__view-all">View all Markets & Applications</a>
+        </div>
+    </div>
+
+
+    <div class="nav-section_products bg-blue-3 overflow-hidden collapse position-fixed col-12" data-obj="nav-section_products"  data-bs-toggle="false" data-nav-collapsed>
+        <div class="container">
+            <h2 class="nav-section_products__header text-white-1 text-uppercase">Plenco’s Products</h2>
+            <div class="nav-section_products__items d-flex justify-content-between flex-wrap mt-4 mx-n3">
+                
+                    <div class="nav-section_products__item-wrap col-3 mx-0 px-3 text-white-1 position-relative">
+                        <div class="nav-section_products__item bg-blue-1 d-flex flex-column align-items-center cursor-pointer px-2 py-4">
+                            <div class="nav-section_products__item__inner-cont d-flex align-items-center col-12 h-100 pb-1">
+                                <p class="nav-section_products__item__text ms-0 text-capitalize mb-0">Phenolic Novolac & Resol Resins</p>
+                            </div>
+                            <div class="border-5 border w-100 border-blue-l2"></div>
+                            <a href=pn-rr.html class="stretched-link"></a>
+                        </div>
+                    </div>
+                
+                    <div class="nav-section_products__item-wrap col-3 mx-0 px-3 text-white-1 position-relative">
+                        <div class="nav-section_products__item bg-blue-1 d-flex flex-column align-items-center cursor-pointer px-2 py-4">
+                            <div class="nav-section_products__item__inner-cont d-flex align-items-center col-12 h-100 pb-1">
+                                <p class="nav-section_products__item__text ms-0 text-capitalize mb-0">Phenolic Molding Materials</p>
+                            </div>
+                            <div class="border-5 border w-100 border-blue-l2"></div>
+                            <a href=pmc.html class="stretched-link"></a>
+                        </div>
+                    </div>
+                
+                    <div class="nav-section_products__item-wrap col-3 mx-0 px-3 text-white-1 position-relative">
+                        <div class="nav-section_products__item bg-blue-1 d-flex flex-column align-items-center cursor-pointer px-2 py-4">
+                            <div class="nav-section_products__item__inner-cont d-flex align-items-center col-12 h-100 pb-1">
+                                <p class="nav-section_products__item__text ms-0 text-capitalize mb-0">BMC/ Thermoset Polyester Molding Materials</p>
+                            </div>
+                            <div class="border-5 border w-100 border-blue-l2"></div>
+                            <a href=bmc.html class="stretched-link"></a>
+                        </div>
+                    </div>
+                
+                    <div class="nav-section_products__item-wrap col-3 mx-0 px-3 text-white-1 position-relative">
+                        <div class="nav-section_products__item bg-blue-1 d-flex flex-column align-items-center cursor-pointer px-2 py-4">
+                            <div class="nav-section_products__item__inner-cont d-flex align-items-center col-12 h-100 pb-1">
+                                <p class="nav-section_products__item__text ms-0 text-capitalize mb-0">Melamine-Phenolic Molding Materials</p>
+                            </div>
+                            <div class="border-5 border w-100 border-blue-l2"></div>
+                            <a href=mp-mm.html class="stretched-link"></a>
+                        </div>
+                    </div>
+                
+            </div>
+            <a href="products.html" class="btn btn-yellow-1 nav-section_products__button button_yellow col-5 mx-auto" id="nav-section_products__view-all">View all Products</a>
+        </div>
+    </div>
+
+
+    <div class="nav-section_search position-fixed overflow-hidden collapse bg-blue-1 bg-opacity-75" data-obj="nav-section_search" data-bs-toggle="false" data-nav-collapsed>
+        <div class="container">
+            <form class="container nav-section_search-cont me-0 col-10 col-lg-8 col-xl-7 pt-5 pb-4 bg-blue-3">
+                <p class="nav-section_search__header text-blue-l2">search the plenco website</p>
+                <div class="nav-section_search__input-cont ps-0 border-bottom border-5 border-blue-l3">
+                    <input type="text" class="nav-section_search__input ps-0 col-100 text-white-1 bg-transparent" placeholder="Search">
+                </div>
+                <div class="nav-section_search__checkboxes d-flex mt-4">
+                    <div class="form-check form-check-inline nav-section_search__checkbox-item me-5 ps-0">
+                        <input type="checkbox" class="form-check-input nav-section_search__checkbox position-absolute opacity-0" id="search__filter-1" value="filter-1" name="search__check_1">
+                        <label for="search__filter-1" class="form-check-label nav-section_search__label d-inline-flex align-items-center text-blue-l2">Filter1</label>
+                    </div>
+                    <div class="form-check form-check-inline nav-section_search__checkbox-item me-5 ps-0">
+                        <input type="checkbox" class="form-check-input nav-section_search__checkbox position-absolute opacity-0" id="search__filter-2" value="filter-2" name="search__check_2">
+                        <label for="search__filter-2" class="form-check-label nav-section_search__label d-inline-flex align-items-center text-blue-l2">Filter2</label>
+                    </div>
+                    <div class="form-check form-check-inline nav-section_search__checkbox-item me-5 ps-0">
+                        <input type="checkbox" class="form-check-input nav-section_search__checkbox position-absolute opacity-0" id="search__filter-3" value="filter-3" name="search__check_3">
+                        <label for="search__filter-3" class="form-check-label nav-section_search__label d-inline-flex align-items-center text-blue-l2">Filter3</label>
+                    </div>
+                    <div class="form-check form-check-inline nav-section_search__checkbox-item me-5 ps-0">
+                        <input type="checkbox" class="form-check-input nav-section_search__checkbox position-absolute opacity-0" id="search__filter-4" value="filter-4" name="search__check_4">
+                        <label for="search__filter-4" class="form-check-label nav-section_search__label d-inline-flex align-items-center text-blue-l2">Filter4</label>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-yellow-1 nav-section_search__button col-4 offset-4 mt-4">search</button>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+</header> 
+
+
+    
+    <a type="button" class="nav_side__btn-msg d-none d-md-flex flex-column navbtn position-fixed align-items-center justify-content-center px-0 bg-blue-l3 end-0 text-decoration-none text-black-1 d-md-none" data-navbtn="contact_modal"> 
+    <img src="./assets/img/svg/chat.svg" alt="Chat" class="nav_side__btn-msg__icon">
+    <span class="nav_side__btn-msg__text_1 text-uppercase">Message</span>
+    <span class="nav_side__btn-msg__text_2">Plenco</span>
+</a>
+
+
+
+
+<!-- Modal ContactUs-->
+<div class="modal fade needs-validation novalidate" data-obj="contactUsModal" tabindex="-1" aria-labelledby="" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered contactUsModal-cont mx-0 mx-sm-auto">
+    <div class="modal-content contactUsModal rounded-0 bg-blue-l1 px-4 px-md-5">
+      	<div class="modal-header contactUsModal__header-cont m-0 p-0 border-0">
+			<h2 class="modal-title contactUsModal__header p-0 mt-4 mt-md-5" id="exampleModalLabel">Contact <span class="text-blue-1">Plenco</span></h2>
+			<button type="button" class="btn-close contactUsModal__btn_close button_arrow_60_r position-absolute top-0 end-0 p-0 m-0 bg-yellow-1 opacity-100 border-0" data-bs-dismiss="modal" aria-label="Close" data-obj="contactUsModal__btn_close"></button>
+    	</div>
+      	<form class="modal-body contactUsModal__body border-start border-5 border-blue-l2 ps-0 ps-md-4 pe-0 py-0 mt-2" id="contactUsModalForm">
+            <div class="contactUsModal__body__inputs-wrap px-0 w-auto d-flex flex-wrap justify-content-between mx-n3">
+                <div class="block_input_2__inputarea col-12 col-md-6 px-3 d-flex flex-column align-items-start mb-4">
+                    <label class="modal-body__header mb-2 text-capitalize" for="modal-contact_name-first">First Name*</label>
+                    <input type="text" class="form-control modal-body__input validate col-12 px-3" id="modal-contact_name-first" placeholder="First Name" required data-validate data-obj="modal-body__input">
+                  </div> 
+                <div class="block_input_2__inputarea col-12 col-md-6 px-3 d-flex flex-column align-items-start mb-4">
+                    <label class="modal-body__header mb-2 text-capitalize" for="modal-contact_name-last">Last Name*</label>
+                    <input type="text" class="form-control modal-body__input validate col-12 px-3" id="modal-contact_name-last" placeholder="Last Name" required data-validate data-obj="modal-body__input">
+                </div> 
+                <div class="block_input_2__inputarea col-12 col-md-6 px-3 d-flex flex-column align-items-start mb-4">
+                    <label class="modal-body__header mb-2 text-capitalize" for="modal-contact_email">Email Address*</label>
+                    <input type="email" class="form-control modal-body__input validate col-12 px-3" id="modal-contact_email" placeholder="mail@adress.com" required data-validate data-obj="modal-body__input">
+                </div> 
+                <div class="block_input_2__inputarea col-12 col-md-6 px-3 d-flex flex-column align-items-start mb-4">
+                    <label class="modal-body__header mb-2 text-capitalize" for="modal-contact_phone">phone number</label>
+                    <input type="tel" class="form-control modal-body__input validate col-12 px-3" id="modal-contact_phone" placeholder="(000) 000-0000" data-validate data-obj="modal-body__input">
+                </div> 
+                <div class="block_input_2__inputarea col-12 px-3 d-flex flex-column align-items-start mb-4">
+                    <label class="modal-body__header mb-2 text-capitalize" for="modal-contact_company">Company Name</label>
+                    <input type="text" class="form-control modal-body__input col-12 px-3" id="modal-contact_company" placeholder="My Company’s Name" data-validate data-obj="modal-body__input">
+                </div> 
+                <div class="block_input_2__inputarea col-12 px-3 d-flex flex-column align-items-start mb-0">
+                    <label class="modal-body__header mb-2 text-capitalize" for="modal-contact_message">message</label>
+                    <textarea type="text" class="form-control modal-body__input col-12 px-3" id="modal-contact_message" placeholder="Write your message" style="height: 119px"  data-obj="modal-body__input"></textarea>
+                    <p class="form-text contactUsModal__add-text mb-0 w-100 px-0 mt-1">*fields are required. Our team will try to respond as soon as we can.</p> 
+                </div> 
+            </div>
+            <button type="submit" form="contactUsModalForm" class="btn btn-yellow-1 contactUsModal__btn_submit mx-auto position-relative" data-obj="contactUsModal__btn_submit">Submit</button>
+      	</form>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal emailSignUp-->
+<div class="modal fade needs-validation novalidate" data-obj="emailSignUpModal" tabindex="-1" aria-labelledby="" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered emailSignUpModal-cont mx-0 mx-sm-auto">
+    <div class="modal-content emailSignUpModal rounded-0 bg-blue-l1 px-4 px-md-5">
+      	<div class="modal-header emailSignUpModal__header-cont m-0 p-0 border-0 d-flex flex-column mt-5 mb-md-3">
+			<img src="./assets/img/svg/logo_plenco_blue.svg" alt="Plenco Logo" class="modal_logo mt-3">
+			<h2 class="modal-title emailSignUpModal__header p-0 mt-4 mt-md-5 align-self-start" id="exampleModalLabel">Email Sign-Up <span class="text-blue-1">Pop-Up</span></h2>
+        	<button type="button" class="btn-close emailSignUpModal__btn_close button_arrow_60_r position-absolute top-0 end-0 p-0 m-0 bg-yellow-1 opacity-100 border-0" data-bs-dismiss="modal" aria-label="Close" data-obj="emailSignUpModal__btn_close"></button>
+      	</div>
+      	<form class="modal-body emailSignUpModal__body border-start border-5 border-blue-l2 ps-0 ps-md-4 pe-0 py-0 mt-2 pt-3" id="emailSignUpModalForm">
+            <div class="emailSignUpModal__body__inputs-wrap px-0 w-auto d-flex flex-wrap justify-content-between mx-n3">
+				<p class="text_add px-3">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna</p>
+				<div class="block_input_2__inputarea col-12 col-md-12 px-3 d-flex flex-column align-items-start mb-4">
+                    <label class="modal-body__header mb-2 text-capitalize" for="modal-email-signup_email">Email Address*</label>
+                    <input type="email" class="form-control modal-body__input validate col-12 px-3" id="modal-email-signup_email" placeholder="mail@adress.com" required data-obj="modal-body__input" data-validate>
+                </div> 
+				<div class="block_input_2__inputarea col-12 col-md-6 px-3 d-flex flex-column align-items-start mb-4">
+                    <label class="modal-body__header mb-2 text-capitalize" for="modal-email-signup_name-first">First Name*</label>
+                    <input type="text" class="form-control modal-body__input validate col-12 px-3" id="modal-email-signup_name-first" placeholder="First Name" required data-obj="modal-body__input" data-validate>
+                  </div> 
+                <div class="block_input_2__inputarea col-12 col-md-6 px-3 d-flex flex-column align-items-start mb-4">
+                    <label class="modal-body__header mb-2 text-capitalize" for="modal-email-signup_name-last">Last Name*</label>
+                    <input type="text" class="form-control modal-body__input validate col-12 px-3" id="modal-email-signup_name-last" placeholder="Last Name" required data-obj="modal-body__input" data-validate>
+                </div> 
+            </div>
+			<p class="form-text emailSignUpModal__add-text mb-0 w-100 px-0 mt-n2">By signing up, you agree to Plenco’s <a class="text-black-1 modal_link" href="priv-policy.html">Privacy Policy</a> and <a class="text-black-1 modal_link" href="terms-conditions.html">Terms and Conditions</a>.</p> 
+			<div class="btn-container d-flex flex-column flex-md-row align-items-center justify-content-center mt-4">
+				<div class="mock me-5 opacity-0 d-none d-md-block">No Thanks</div>
+				<button type="submit" form="emailSignUpModalForm" class="btn btn-yellow-1 emailSignUpModal__btn_submit mt-2 mt-md-0" data-obj="emailSignUpModal__btn_submit">Sign Up</button>
+				<a type="button" class="position-relative text-black-1 ms-md-5 mt-3 mt-md-0" data-bs-dismiss="modal" aria-label="Close">No Thanks</a>
+			</div>
+		</form>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal emailDownload-->
+<div class="modal fade needs-validation novalidate" data-obj="emailDownloadModal" tabindex="-1" aria-labelledby="" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered emailDownloadModal-cont mx-0 mx-sm-auto">
+	  <div class="modal-content emailDownloadModal rounded-0 bg-blue-l1 px-4 px-md-5">
+			<div class="modal-header emailDownloadModal__header-cont m-0 p-0 border-0 d-flex flex-column mt-5 mb-md-3">
+			  <h2 class="modal-title emailDownloadModal__header p-0 mt-4 mt-md-5 align-self-start" id="exampleModalLabel">Download Resource Email Capture <span class="text-blue-1">Heading</span></h2>
+			  <button type="button" class="btn-close emailDownloadModal__btn_close button_arrow_60_r position-absolute top-0 end-0 p-0 m-0 bg-yellow-1 opacity-100 border-0" data-bs-dismiss="modal" aria-label="Close" data-obj="emailDownloadModal__btn_close"></button>
+			</div>
+			<form class="modal-body emailDownloadModal__body border-start border-5 border-blue-l2 ps-0 ps-md-4 pe-0 py-0 mt-2 pt-3" id="emailDownloadModalForm">
+			  <div class="emailDownloadModal__body__inputs-wrap px-0 w-auto d-flex flex-wrap justify-content-between mx-n3">
+				  <p class="text_add px-3">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna</p>
+				  <div class="block_input_2__inputarea col-12 col-md-6 px-3 d-flex flex-column align-items-start mb-4">
+					  <label class="modal-body__header mb-2 text-capitalize" for="modal-email-download_name-first">First Name*</label>
+					  <input type="text" class="form-control modal-body__input validate col-12 px-3" id="modal-email-download_name-first" placeholder="First Name" required data-obj="modal-body__input" data-required>
+					</div> 
+				  <div class="block_input_2__inputarea col-12 col-md-6 px-3 d-flex flex-column align-items-start mb-4">
+					  <label class="modal-body__header mb-2 text-capitalize" for="modal-email-download_name-last">Last Name*</label>
+					  <input type="text" class="form-control modal-body__input validate col-12 px-3" id="modal-email-download_name-last" placeholder="Last Name" required data-obj="modal-body__input" data-required>
+				  </div> 
+				  <div class="block_input_2__inputarea col-12 col-md-6 px-3 d-flex flex-column align-items-start mb-4">
+					<label class="modal-body__header mb-2 text-capitalize" for="modal-email-download_email">Email Address*</label>
+					<input type="email" class="form-control modal-body__input validate col-12 px-3" id="modal-email-download_email" placeholder="mail@adress.com" required data-obj="modal-body__input" data-required>
+				</div> 
+				<div class="block_input_2__inputarea col-12 col-md-6 px-3 d-flex flex-column align-items-start mb-4">
+                    <label class="modal-body__header mb-2 text-capitalize" for="modal-email-download_company">Company Name</label>
+                    <input type="text" class="form-control modal-body__input col-12 px-3" id="modal-email-download_company" placeholder="My Company’s Name"  data-obj="modal-body__input">
+                </div> 
+				<div class="block_input_2__inputarea col-12 col-md-6 px-3 d-flex flex-column align-items-start mb-2">
+                    <label class="modal-body__header mb-2 text-capitalize" for="modal-email-download_company">Industry</label>
+					
+					<div class="accordion accordion-flush emailDownloadModal_accordion col-12" id="accordion-emailDownloadModal" data-obj="accordion-emailDownloadModal">
+						<div class="accordion-item mb-2">
+							<h2 class="accordion-header" id="acc-emailDownloadModal__header-1">
+								<button data-obj="accordion-emailDownloadModal__button" class="accordion-button d-flex align-items-center justify-content-between position-relative collapsed bg-blue-1 ps-4" type="button" data-bs-toggle="collapse" data-bs-target="#acc-emailDownloadModal__body-1" aria-expanded="true" aria-controls="acc-emailDownloadModal__body-1">
+									<p class="d-block mb-0 text-white-1 pe-4" id="accordion-emailDownloadModal__current">Select industry</p> 
+								</button>
+							</h2>
+							<div id="acc-emailDownloadModal__body-1" class="accordion-collapse collapse" aria-labelledby="acc-emailDownloadModal__header-1" data-bs-parent="#accordion-emailDownloadModal" data-obj="acc-emailDownloadModal__body-1">
+								<div class="accordion-body pb-2 pt-0">
+									<div role="button" class="accordion-body__item d-flex align-items-center bg-blue-1 px-4 border border-1 border-blue-3 hover">
+										<span role="button" class="accordion__text-2 accordion-emailDownloadModal__select mb-0 text-white-1">Select industry</span>
+									</div>
+									<div role="button" class="accordion-body__item d-flex align-items-center bg-blue-1 px-4 border border-1 border-blue-3">
+										<span role="button" class="accordion__text-2 accordion-emailDownloadModal__select mb-0 text-white-1">1</span>
+									</div>
+									<div role="button" class="accordion-body__item d-flex align-items-center bg-blue-1 px-4 border border-1 border-blue-3">
+										<span role="button" class="accordion__text-2 accordion-emailDownloadModal__selectmb-0 text-white-1">2</span>
+									</div>
+									<div role="button" class="accordion-body__item d-flex align-items-center bg-blue-1 px-4 border border-1 border-blue-3">
+										<span role="button" class="accordion__text-2 accordion-emailDownloadModal__select mb-0 text-white-1">3</span>
+									</div>  
+								</div>
+							</div>
+						</div>
+					</div>
+
+                </div>
+				<input type="text" class="form-control modal-body__input d-none" data-obj="emailDownloadModal-industry-input" placeholder=""  data-obj="modal-body__input">
+
+				<div class="block_input_2__inputarea col-12 col-md-6 px-3 d-flex flex-column align-items-start mb-4 mt-md-4 h-100">
+					<p class="form-text emailDownloadModal__add-text mb-0 w-100 px-0 col-12 col-md-6 mt-0 mt-md-3">By signing up, you agree to Plenco’s <a class="text-black-1 modal_link" href="priv-policy.html">Privacy Policy</a> and <a class="text-black-1 modal_link" href="terms-conditions.html">Terms and Conditions</a>.</p> 
+				</div>
+			  </div>
+			  <div class="btn-container d-flex flex-column flex-md-row align-items-center justify-content-center mt-md-4">
+				  <div class="mock me-5 opacity-0 d-none d-md-block">No Thanks</div>
+				  <button type="submit" form="emailDownloadModalForm" class="btn btn-yellow-1 emailDownloadModal__btn_submit mt-2 mt-md-0" data-obj="emailDownloadModal__btn_submit">Download</button>
+				  <a type="button" class="position-relative text-black-1 ms-md-5 mt-3 mt-md-0" data-bs-dismiss="modal" aria-label="Close">No Thanks</a>
+			  </div>
+		  </form>
+	  </div>
+	</div>
+  </div>
+  
+
+    <div class=" col-12 px-0 row section_heading_top_bg pt-0 section_heading_top overflow-hidden position-relative">
+    <div class="section_heading_top__bg_img-cont p-0 m-0 position-absolute bg-blue-1">
+        <div class="section_heading_top__bg_img p-0 m-0  w-100" style="background-image:  url(./assets/img/pages/mp-mm-cost-param/heading.jpg)"></div>
+    </div>
+    <div class="section_heading_top px-0 col-12">
+        <div class="container cont-site">
+            <div class="section_heading_top__center-block__cont bg-blue-3 position-relative col-12 col-sm-9  mx-auto col-md-7 col-lg-6 overline overline_mob d-flex flex-column justify-content-center align-items-center px-3">
+                <h3 class="text-center my-0 text-blue-l2 text-uppercase">  </h3>
+                <h1 class="section_heading_top__center__header text-center my-0 text-white-1"> Melamine-Phenolic Molding Materials Cost Parameters </h1>
+            </div>            
+        </div>
+    </div>
+</div>
+    
+    <div class="row section_heading_bottom bg-blue-3">
+        <div class="col px-0">
+            <div class="container cont-site d-flex flex-column justify-content-center h-100">
+                <div>
+                    <p class="text_heading_main text-white-1 mb-0">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero <span class='text-blue-l2'>eos et accusam et justo</span>.</p>
+                </div> 
+                <div>                     
+                    <p class="text_heading_add pt-4 text-white-1"></p> 
+                </div>                
+            </div>
+        </div>
+    </div>
+    
+ 
+
+
+
+    <div class="row section_37 overflow-hidden">
+        <div class="col px-0">
+            <div class="container cont-site col-12 d-flex ">
+                <div class="section_37__left col-3 pe-5 d-none d-md-block ">
+                    <div class="section_37__left__content-cont border-start border-7 border-blue-l2 ms-n3 ps-3 py-3">
+                        <a href="mp-mm.html" class="section_37__left__link text-decoration-none d-flex">
+                            <h3 class="text-blue-1 mb-0">Melamine-Phenolic Molding Materials</h3>
+                        </a>
+                        <a href="mp-mm-envir-details.html" class="section_37__left__link text-decoration-none mt-4 d-flex">
+                            <h3 class="text-blue-1 mb-0">Environmental Details</h3>
+                        </a>
+                        <a href="mp-mm-app.html" class="section_37__left__link text-decoration-none mt-4 d-flex">
+                            <h3 class="text-blue-1 mb-0">Applications</h3>
+                        </a>
+                        <a  class="section_37__left__link text-decoration-none mt-4 d-flex">
+                            <h3 class="text-blue-l2 mb-0">Cost Parameters</h3>
+                        </a>
+                        <a href="#product-series" class="section_37__left__link text-decoration-none mt-4 d-flex">
+                            <h3 class="text-blue-1 mb-0">Product Series</h3>
+                        </a>
+                        <a href="mp-mm.html" class="section_37__left__link text-decoration-none mt-4 d-flex">
+                            <h3 class="text-blue-1 mb-0">Resources</h3>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="section_37__right col-12 col-md-9 ps-md-5">
+                    <div class="section_37__data d-flex flex-column-reverse flex-lg-row position-relative align-items-center">
+                        <div class="section_37__textarea px-0 col-12 position-relative">
+                            <div class="section_37__textarea-wrap col-12">
+                                <div class="block_4 d-flex flex-column justify-content-between">
+                                    <div class="block_4__text-cont pe-3">
+                                        <div class="mock d-none d-lg-block float-end  ms-5 mb-5">
+                                            <div class="section_37__img-cont_dt position-relative  d-flex justify-content-end align-self-md-end  d-none d-lg-block">
+                                                <img src="./assets/img/pages/mp-mm-cost-param/mp-mm-cost-param.jpg" alt="mp-mm-cost-param" class="section_37__image_dt position-relative d-none d-lg-block">
+                                            </div>
+                                        </div>
+                                        <h2 class="block_4__header section_37__header-line position-relative mb-0 text-start d-none d-md-block " id="cost">Melamine-Phenolic Molding Material <span class='text-blue-1 font-normal'>Cost Parameters</span></h2>
+                                        <p class="text_add position-relative mb-0 text-lg-start mt-4">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo</p>
+                                        <p class="text_add position-relative mb-0 text-lg-start mt-4">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat</p>
+                                    </div>
+                                </div>    
+                            </div>
+                        </div>
+
+                        <div class="section_37__img-cont position-relative  d-flex justify-content-end align-self-md-end d-lg-none">
+                            <img src="./assets/img/pages/mp-mm-cost-param/mp-mm-cost-param.jpg" alt="mp-mm-cost-param" class="section_37__image position-relative">
+                        </div>
+                        <h2 class="block_4__header section_37__header-line position-relative mb-4 text-start mt-5 mt-lg-0 d-md-none align-self-start">Melamine-Phenolic Molding Material <span class='text-blue-1 font-normal'>Cost Parameters</span></h2>
+                    
+                        <div class="accordion accordion-flush section_37_accordion d-md-none mt-5 col-12" id="oil-accordion-nav">
+                            <div class="row ">
+        
+                                <div class="acc__item-wrap col-12 px-0">
+                                    <div class="accordion-item ">
+                                        <h2 class="accordion-header border-bottom border-7 border-yellow-1" id="acc-nav__header-1">
+                                            <button class="accordion-button d-flex align-items-center justify-content-between position-relative bg-white-1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#acc-nav__body-1" aria-expanded="true" aria-controls="acc-nav__body-1">
+                                                <h3 class="accordion-header d-block mb-0 text-uppercase text-blue-1">Cost Parameters</h3> 
+                                            </button>
+                                        </h2>
+                                        <div id="acc-nav__body-1" class="accordion-collapse collapse" aria-labelledby="acc-nav__header-1" data-bs-parent="">
+                                            <div class="accordion-body pt-2 pb-0">
+                                                <a href="mp-mm.html" class="section_37__left__link text-decoration-none mt-4 d-flex">
+                                                    <h3 class="text-blue-1 mb-0">Melamine-Phenolic Molding Materials</h3>
+                                                </a>
+                                                <a href="mp-mm-envir-details.html" class="section_37__left__link text-decoration-none mt-4 d-flex">
+                                                    <h3 class="text-blue-1 mb-0">Environmental Details</h3>
+                                                </a>
+                                                <a href="mp-mm-app.html" class="section_37__left__link text-decoration-none mt-4 d-flex">
+                                                    <h3 class="text-blue-1 mb-0">Applications</h3>
+                                                </a>                                                
+                                                <a href="#product-series" class="section_37__left__link text-decoration-none mt-4 d-flex">
+                                                    <h3 class="text-blue-1 mb-0">Product Series</h3>
+                                                </a>
+                                                <a href="mp-mm.html" class="section_37__left__link text-decoration-none mt-4 d-flex">
+                                                    <h3 class="text-blue-1 mb-0">Resources</h3>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <p class="section_37__subheader text-blue-1 mt-5 mb-0">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo</p>
+                    <p class="text_add position-relative mb-0 text-start mt-4">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et</p>
+
+
+                    
+
+                    <div class="row section_27_bg bg-blue-l1 ms-3 ms-md-n4">
+                        <div class="col px-0">
+                            <div class="container section_27 d-flex flex-column justify-content-center mt-4 mt-md-5">
+                                <h2 class="section_37__header-line mb-0 position-relative mt-0 ms-n5 ps-2 ps-md-0 ms-md-0" id="product-series">Related <span class='text-blue-1 font-normal'>Product Series</span></h2>
+                
+                                <div class="section_27__blocks row row-cols-sm-1 g-3 g-md-4 mx-n2 mt-1">
+                
+                
+                                    <div class="block_6-wrap col-lg-6">
+                                        <div class="block_6 position-relative bg-white-1 d-flex flex-column justify-content-between py-3">
+                                            <div class="block_6__header d-flex align-items-center px-4 flex-grow-1">
+                                                <p class="block_6__text mb-0 text-black-1">Melamine/Phenolic Molding Compounds</p>
+                                            </div>
+                                            <div class="block_6__line h-0 w-50 border-bottom border-1 border-blue-l2 ms-4"></div>
+                                            <div class="block_6__links mt-2 ps-4 pe-5">
+                                                <div class="block_6__link text-decoration-none">
+                                                    <h3 class="mb-0 text-blue-1 d-inline-block">Plenco Series 00700</h3>
+                                                </div> 
+                                                <div class="btn button_arrow_45_r bg-yellow-1 block_6__button position-absolute bottom-0 end-0"></div>
+                                            </div>
+                                            <a href="series-00700.html" class="stretched-link "></a>
+                                        </div>    
+                                    </div>
+
+
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="row section_107_bg h-100 p-0 m-0 overline-r overline_mob-r"> 
+        <div class="section_107 col-12 px-0 d-flex align-items-start align-items-md-center pt-5 pb-4 pb-lg-5">
+            <div class="container cont-site section_107__content col-md-12 d-flex flex-column flex-lg-row justify-content-start justify-content-md-between align-items-center mt-3 mt-md-0">
+                <div class="section_107__left col-lg-8 position-relative">
+                    <h1 class="section_107__header text-center text-lg-start text-blue-l3 mb-0">Learn More</h1>
+                    <p class="section_107__text text-center text-lg-start text-white-1 mb-0 pe-lg-4">Melamine-Phenolic Molding Materials Cost Parameters</p>
+                </div>
+                <div class="section_107__right col-lg-4  position-relative align-self-center align-self-lg-end">
+                    <a type="button" class="btn btn-yellow-1 section_107__button ms-0 ms-md-4 mt-4 mt-lg-0 navbtn" data-navbtn="contact_modal">Contact Plenco</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+
+
+
+
+    
+    <div class="row footer_bg position-relative">
+    <div class="footer__bg-cont position-absolute overflow-hidden">
+        <img src="./assets/img/plenco__logo_footer-main.png" alt="" class="footer__bg__img_main position-absolute">
+    </div>
+
+    <div class="footer px-0">
+        <div class="container cont-site col-12 px-36 d-flex flex-column d-md-flex flex-md-row justify-content-start pb-3 position-relative">
+
+            <div class="footer__block_left col-12 col-md-4 col-lg-3 offset-md-2 offset-lg-1 offset-xl-0">
+                <p class="footer__text_bold mb-0 text-center text-md-start position-relative">Plastics Engineering Company</p>
+                <p class="footer__text text-center text-md-start position-relative">3518 Lakeshore Road</p>
+                <p class="footer__text text-center text-md-start position-relative">P.O. Box 758</p>
+                <p class="footer__text text-center text-md-start position-relative">Sheboygan, WI 53082-0758</p>
+                <div class="footer__logos_wrapper_left d-none d-md-flex">
+                    <a href="facebook.com">
+                        <img src="./assets/img/svg/footer__logo_fb.svg" alt="FB" class="footer__logo">
+                    </a>
+                    <a href="facebook.com">
+                        <img src="./assets/img/svg/footer__logo_youtube.svg" alt="Youtube" class="footer__logo">
+                    </a>
+                    <a href="facebook.com">
+                        <img src="./assets/img/svg/footer__logo_linkedin.svg" alt="LinkedIn" class="footer__logo">
+                    <a>
+                </div>
+                <div class="footer__website-by_wrapper d-none d-md-flex d-flex align-items-center">
+                    <p class="footer__text footer__website-by">Website by: </p>
+                    <img src="./assets/img/svg/logo_5-color.svg" alt="Logo" class="footer__logo">
+                </div>
+            </div>
+
+            <div class="footer__logos__cont offset-0 col-12 offset-md-1 offset-lg-4 offset-xl-6 col-md-3 col-lg-3 d-flex justify-md-content-end">
+                <div class="footer__logos_wrapper_middle col-6 col-md-1 d-md-none d-flex justify-content-evenly ">
+                    <a href="facebook.com">
+                        <img src="./assets/img/svg/footer__logo_fb.svg" alt="FB" class="footer__logo">
+                    </a>
+                    <a href="facebook.com">
+                        <img src="./assets/img/svg/footer__logo_youtube.svg" alt="Youtube" class="footer__logo">
+                    </a>
+                    <a href="facebook.com">
+                        <img src="./assets/img/svg/footer__logo_linkedin.svg" alt="LinkedIn" class="footer__logo">
+                    <a>
+                </div>
+                <div class="footer__right-block col-6 col-md-9 col-lg-7 col-xl-6 offset-0 offset-md-12 offset-lg-5 offset-xl-6 d-flex flex-column">
+                    <a href="priv-policy.html" class="footer__link order-3 order-md-1 position-relative"><p class="footer__text footer__text_spec">Privacy Policy</p></a>
+                    <a href="terms-conditions.html" class="footer__link order-4 order-md-2 position-relative"><p class="footer__text">Terms & Conditions</p></a>
+                    <a href="accessibility.html" class="footer__link order-5 order-md-3 position-relative"><p class="footer__text">Accessibility</p></a>
+                    <a href="#" class="footer__link order-2 order-md-4 position-relative"><p class="footer__text_bold">Employee Login</p></a>
+                    <a href="certificate" class="footer__link order-1 order-md-5 position-relative"><p class="footer__text_bold">ISO Certificate & Certifications</p></a>
+                    
+                    <div class="footer__website-by_wrapper d-flex d-md-none align-items-center order-5">
+                        <p class="footer__text footer__website-by">Website by: </p>
+                        <img src="./assets/img/svg/logo_5-color.svg" alt="Logo" class="footer__logo">
+                    </div>
+
+                    <div class="footer__desing d-flex align-items-center justify-content-center position-absolute">
+                            <a href="plenco-wireframes.html" class="footer__design_text text-center ">Exit Design</a>
+                    </div>
+    
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src='./assets/js/layout.js'></script>
+    
+    
+
+    
+</body>
+</html>

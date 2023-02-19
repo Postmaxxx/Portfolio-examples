@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="description" content="A demo of how to use gulp-twig"/>
+    <meta name="author" content="Simon de Turck"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="./assets/css/bundle.css">
+     
+    <title>Phenolic Novolac & Resol Resins Applications</title>
+</head>
+
+<body class="body_pn-rr-app">
+
+    <div class="layout__line_center position-fixed"></div>
+    <div class="layout__line_bottom d-md-none position-fixed"></div>
+    <div class="block_cookies collapse bg-grey-2 w-100 position-fixed py-3" data-obj="block_cookies" data-bs-toggle="false">
+    <div class="block_cookies__content container d-flex flex-column flex-md-row px-4">
+        <p class="block_cookies__text text_add col-md-8 col-lg-10 mb-3 mb-md-0 text-center text-md-start">Cookies make our site work properly and securely. By allowing us, you will 
+            get the best user experience with brand enriched content & relevant products and services. 
+        <a class="block_cookies__link text-black-1 d-block d-md-inline" href="#">More information about Cookies.</a></p>
+            
+        <div class="block_cookies__decisions ms-auto me-auto me-md-0 d-flex justify-content-center justify-content-md-between align-items-center">
+            <button class="block_cookies__btn_accept btn_cookies text-uppercase text-blue-1 ms-md-4" id="cookies_accept" data-cookieaction="accept">accept</button>
+            <button class="block_cookies__btn_close btn_cookies text-black-1 text-decoration-underline ms-4 me-4 me-xl-0" id="cookies_deny" data-cookieaction="deny">Close</button>
+        </div>
+    </div>
+    <img class="block_cookies__close d-none d-md-block col-6 col-md btn_cookies position-absolute" src="./assets/img/svg/close.svg" id="cookies_close" data-cookieaction="close">
+
+</div>
+
+    
+    <header class="header">
+    <nav class="navbar navbar-expand-md d-none d-md-flex bg-blue-l1">
+  <div class="container">
+    <div class="navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-0">
+        <li class="nav-item px-0">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item px-0">
+          <a class="nav-link text-nowrap px-0" href="facility.html">Facility</a>
+        </li>
+        <li class="nav-item px-0">
+          <a class="nav-link text-nowrap px-0" href="research-development.html">Research & Development</a>
+        </li>
+        <li class="nav-item px-0">
+          <a class="nav-link text-nowrap px-0" href="news-blog.html">News</a>
+        </li>
+        <li class="nav-item px-0">
+          <a class="nav-link text-nowrap px-0" href="certifications.html">Certifications</a>
+        </li>
+        <li class="nav-item px-0">
+          <a class="nav-link text-nowrap px-0" href="careers.html">Careers</a>
+        </li>
+
+        
+        <li class="nav-item">
+            <a class="nav-link d-flex align-items-center navbtn px-0" role="button" id="nav_top__btn_search" data-navbtn="nav-section_search">Search
+              <img src="./assets/img/svg/nav_top__search-icon.svg" class="m-0 ps-2" />
+            </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    
+
+
+
+
+    
+
+
+<div class="nav_bottom__btn position-absolute d-none d-xl-block end-0 p-0">
+    <button type="button" class="navbtn button_yellow_nav" data-navbtn="contact_modal">contact</button> 
+
+</div>
+
+
+<div class="row nav_bottom">
+    <div class="nav_bottom_menu-wrap col p-0 bg-white-1">
+        <div class="nav_bottom_menu container cont-site d-flex align-items-center justify-content-between px-0">
+            <a href="home.html"><img class="nav_bottom__logo" src="./assets/img/svg/logo_plenco_blue.svg" alt="Plenco Logo" ></a>
+            <div class="nav_bottom__links d-none d-md-flex align-items-center justify-content-between ms-0 ms-xl-4">
+                <div class="nav_bottom__link-cont d-flex align-items-center cursor-pointer navbtn text-center text-xl-start" role="button" data-navbtn="nav-section_markets" data-navbtnSelectable>
+                    <p class="nav_bottom__link text-uppercase text-black-1 m-0">Markets & Applications</p> 
+                </div>
+                <div class="nav_bottom__link-cont d-flex align-items-center cursor-pointer navbtn" role="button" data-navbtn="nav-section_products" data-navbtnSelectable>
+                    <p class="nav_bottom__link text-uppercase text-black-1 m-0" >products</p> 
+                </div>
+                <div class="nav_bottom__link-cont d-flex align-items-center position-relative">
+                    <a href="reports-resources.html" class="nav_bottom__link text-uppercase text-black-1 m-0 stretched-link">Reports & Resources</a>    
+                </div>
+                <div class="nav_bottom__btn_yellow d-inline-block d-xl-none p-0 ms-4">
+                    <button  type="button" class="navbtn button_yellow_nav text-uppercase text-black-1" data-navbtn="contact_modal"> contact</button>
+                </div>
+
+            </div>
+
+            <div class="nav_bottom__btn_mob d-inline-block d-md-none d-xl-none navbtn ms-4 p-0 h-100" role="button" data-navbtn="mob_main">
+                <button class="button_yellow_nav_mob d-flex flex-column justify-content-end" data-obj="nav__btn_mob">
+                    <div class="button_yellow_nav_mob__top_left button_yellow_nav_mob_anim position-absolute bg-black-1"></div>
+                    <div class="button_yellow_nav_mob__top_right button_yellow_nav_mob_anim position-absolute bg-black-1"></div>
+                    <div class="button_yellow_nav_mob__middle position-absolute bg-black-1"></div>
+                    <div class="button_yellow_nav_mob__bottom_left button_yellow_nav_mob_anim position-absolute bg-black-1"></div>
+                    <div class="button_yellow_nav_mob__bottom_right button_yellow_nav_mob_anim position-absolute bg-black-1"></div>
+                    <div class="button_yellow_nav_mob__text-cont d-block overflow-hidden">
+                        <span class="button_yellow_nav_mob__text_1 uppercase d-block text-black-1">menu</span>
+                        <span class="button_yellow_nav_mob__text_2 uppercase d-block text-black-1">exit</span>
+                    </div>
+                </button> 
+            </div>
+
+        </div>
+    </div>
+
+
+    
+
+
+    <div class="nav_bottom__drop__cont position-relative overflow-hidden mx-0 px-0 bg-transparent">
+        <div class="nav_bottom__drop overflow-hidden position-relative collapse px-0 top-0" data-obj="nav_bottom__drop_main" data-bs-toggle="false" data-nav-collapsed>
+            <div class="nav_bottom__drop__cont-1 overflow-hidden cont-site bg-blue-l1">
+                <div class="nav_bottom__drop__input-block col-12 d-flex align-items-center position-relative">
+                    <div class="nav_bottom__drop__input-cont col-12 d-flex justify-content-between align-items-center border-bottom border-2 border-blue-2">
+                        <input type="text" class="nav_bottom__drop__input h-100 ps-2 col bg-transparent" placeholder="Search">
+                        <button class="nav_bottom__drop__input-btn mx-3"></button>
+                    </div>
+                </div>
+
+                <div class="nav_bottom__drop__block_1 mb-3" id="nav_bottom__drop__block_1">
+                    <a role="button" class="nav_bottom__btn_1 nav_bottom__btn_resources bg-blue-1 navbtn col-12 text-uppercase mt-2 text-white-1 d-flex align-items-center justify-content-center mt-2" data-obj="nav_bottom__btn_markets" type="button" data-navbtn="nav_bottom__drop_markets"  data-nav-collapsed>Markets & Applications</a>
+                    <a role="button" class="nav_bottom__btn_1 nav_bottom__btn_products bg-blue-1 navbtn col-12 text-uppercase text-white-1 d-flex align-items-center justify-content-center mt-3" data-obj="nav_bottom__btn_products" type="button" data-navbtn="nav_bottom__drop_products" data-nav-collapsed>Products</a>
+                    <a href="reports-resources.html" class="nav_bottom__btn_1 col-12 text-uppercase bg-blue-1 text-white-1 d-flex align-items-center justify-content-center mt-3">Reports & Resources</a>
+                    <button  type="button" class="navbtn nav_bottom__btn_1 nav_bottom__btn_1_spec bg-yellow-1 col-12 text-uppercase text-black-1 position-relative d-flex align-items-center justify-content-center text-black-1 mt-3" data-navbtn="contact_modal">contact</button>
+
+                </div>
+            </div>
+
+            <div class="nav_bottom__drop__cont-2 cont-site bg-blue-3">
+                <div class="nav_bottom__drop__block_2 row row-cols-2 g-2 mt-0" id="nav_bottom__drop__block-2">
+                    <div class="nav_bottom__btn_2-wrap">
+                        <a href="about.html" class="nav_bottom__btn_2 text-white-1 bg-transparent d-flex align-items-center justify-content-center text-capitalize border border-2 border-blue-1">About</a>
+                    </div>
+                    <div class="nav_bottom__btn_2-wrap">
+                        <a href="facility.html" class="nav_bottom__btn_2 text-white-1 bg-transparent d-flex align-items-center justify-content-center text-capitalize border border-2 border-blue-1">Facility</a>
+                    </div>
+                    <div class="nav_bottom__btn_2-wrap">
+                        <a href="research-development.html" class="nav_bottom__btn_2 text-white-1 bg-transparent d-flex align-items-center justify-content-center text-capitalize border border-2 border-blue-1">Research & Development</a>
+                    </div>
+                    <div class="nav_bottom__btn_2-wrap">
+                        <a href="news-blog.html" class="nav_bottom__btn_2 text-white-1 bg-transparent d-flex align-items-center justify-content-center text-capitalize border border-2 border-blue-1">News</a>
+                    </div>
+                    <div class="nav_bottom__btn_2-wrap">
+                        <a href="certifications.html" class="nav_bottom__btn_2 text-white-1 bg-transparent d-flex align-items-center justify-content-center text-capitalize border border-2 border-blue-1">Certifications</a>
+                    </div>
+                    <div class="nav_bottom__btn_2-wrap">
+                        <a href="careers.html" class="nav_bottom__btn_2 text-white-1 bg-transparent d-flex align-items-center justify-content-center text-capitalize border border-2 border-blue-1">Careers</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav__drop__opacity-block col-12 m-0 p-0 opacity-75 bg-blue-3"></div>
+
+        </div>
+
+
+
+
+        <div class="overflow-hidden position-relative collapse" data-bs-toggle="false" data-obj="nav_bottom__drop_markets" data-nav-collapsed>
+            <div class="nav_bottom__drop__back cont-site d-flex align-items-center navbtn col-12 left-0 bg-blue-l1" type="button" data-navbtn="mob_back">
+                <div class="nav_bottom__drop__back__arrow position-relative bg-blue-1"></div>
+                <p class="nav_bottom__drop__back__text my-0 ms-3 text-black-1">Back to the Main Menu</p>    
+            </div>
+            <div class="nav_bottom__drop__cont-add-menu cont-site overflow-hidden m-0 bg-blue-3 pb-4" id="nav_bottom__markets">
+                <div class="nav_bottom__drop__cont-add-menu-wrap">
+                    <h2 class="nav_bottom__drop__add-menu__header text-white-1 mb-0 text-uppercase">Markets & Applications</h2>
+                    <div class="nav_bottom__drop__add-menu__links d-flex flex-column mt-3">
+                        
+                            <div class="wrapper position-relative">
+                                <div class="nav_bottom__drop__add-menu__link-cont col-12 py-2 d-flex justify-content-between align-items-center border-bottom border-2 border-blue-1">
+                                    <p class="nav_bottom__drop__add-menu__link_text text-capitalize my-0 text-start text-white-1">Automotive</p>
+                                    <div class="nav_bottom__drop__add-menu__arrow position-relative bg-yellow-1"></div>
+                                </div>
+                                <a href=automotive.html class="stretched-link"></a>
+                            </div>
+                        
+                            <div class="wrapper position-relative">
+                                <div class="nav_bottom__drop__add-menu__link-cont col-12 py-2 d-flex justify-content-between align-items-center border-bottom border-2 border-blue-1">
+                                    <p class="nav_bottom__drop__add-menu__link_text text-capitalize my-0 text-start text-white-1">Electrical Insulation</p>
+                                    <div class="nav_bottom__drop__add-menu__arrow position-relative bg-yellow-1"></div>
+                                </div>
+                                <a href=electrical-insulation.html class="stretched-link"></a>
+                            </div>
+                        
+                            <div class="wrapper position-relative">
+                                <div class="nav_bottom__drop__add-menu__link-cont col-12 py-2 d-flex justify-content-between align-items-center border-bottom border-2 border-blue-1">
+                                    <p class="nav_bottom__drop__add-menu__link_text text-capitalize my-0 text-start text-white-1">Home & Commercial Kitchen</p>
+                                    <div class="nav_bottom__drop__add-menu__arrow position-relative bg-yellow-1"></div>
+                                </div>
+                                <a href=home-commercial.html class="stretched-link"></a>
+                            </div>
+                        
+                            <div class="wrapper position-relative">
+                                <div class="nav_bottom__drop__add-menu__link-cont col-12 py-2 d-flex justify-content-between align-items-center border-bottom border-2 border-blue-1">
+                                    <p class="nav_bottom__drop__add-menu__link_text text-capitalize my-0 text-start text-white-1">Small Engine</p>
+                                    <div class="nav_bottom__drop__add-menu__arrow position-relative bg-yellow-1"></div>
+                                </div>
+                                <a href=small-engine.html class="stretched-link"></a>
+                            </div>
+                        
+                            <div class="wrapper position-relative">
+                                <div class="nav_bottom__drop__add-menu__link-cont col-12 py-2 d-flex justify-content-between align-items-center border-bottom border-2 border-blue-1">
+                                    <p class="nav_bottom__drop__add-menu__link_text text-capitalize my-0 text-start text-white-1">Lighting</p>
+                                    <div class="nav_bottom__drop__add-menu__arrow position-relative bg-yellow-1"></div>
+                                </div>
+                                <a href=lighting.html class="stretched-link"></a>
+                            </div>
+                        
+                            <div class="wrapper position-relative">
+                                <div class="nav_bottom__drop__add-menu__link-cont col-12 py-2 d-flex justify-content-between align-items-center border-bottom border-2 border-blue-1">
+                                    <p class="nav_bottom__drop__add-menu__link_text text-capitalize my-0 text-start text-white-1">Oil & Gas</p>
+                                    <div class="nav_bottom__drop__add-menu__arrow position-relative bg-yellow-1"></div>
+                                </div>
+                                <a href=oil-gas.html class="stretched-link"></a>
+                            </div>
+                        
+                    </div>
+                </div>
+                <a href="markets-applications.html" class="btn btn-yellow-1 nav_bottom__drop__add-menu__button w-100 p-3 h-auto" id="nav_bottom__view-markets">View All<br>Markets & Applications</a>
+            </div>
+            <div class="nav__drop__opacity-block col-12 m-0 p-0 opacity-75 bg-blue-3"></div>
+        </div>
+
+
+        <div class="overflow-hidden position-relative collapse" data-bs-toggle="false" data-obj="nav_bottom__drop_products" data-nav-collapsed>
+            <div class="nav_bottom__drop__back cont-site d-flex align-items-center navbtn col-12 left-0 bg-blue-l1" type="button" data-navbtn="mob_back">
+                <div class="nav_bottom__drop__back__arrow position-relative bg-blue-1"></div>
+                <p class="nav_bottom__drop__back__text my-0 ms-3 text-black-1">Back to the Main Menu</p>    
+            </div>
+            <div class="nav_bottom__drop__cont-add-menu cont-site pb-4 bg-blue-3 overflow-hidden m-0 d-flex flex-column justify-content-between" id="nav_bottom__products">
+                <div class="nav_bottom__drop__cont-add-menu-wrap">
+                    <h2 class="nav_bottom__drop__add-menu__header mb-0 text-white-1 text-uppercase">Plenco’s Products</h2>
+                    <div class="nav_bottom__drop__add-menu__links d-flex flex-column mt-3">
+                        
+                        <div class="wrapper position-relative">
+                            <div class="nav_bottom__drop__add-menu__link-cont py-2 col-12 d-flex justify-content-between align-items-center border-bottom border-2 border-blue-1">
+                                <p class="nav_bottom__drop__add-menu__link_text text-capitalize my-0 text-start text-white-1">Phenolic Novolac & Resol Resins</p>
+                                <div class="nav_bottom__drop__add-menu__arrow position-relative"></div>
+                            </div>
+                            <a href=pn-rr.html class="stretched-link"></a>
+                        </div>
+                        
+                        <div class="wrapper position-relative">
+                            <div class="nav_bottom__drop__add-menu__link-cont py-2 col-12 d-flex justify-content-between align-items-center border-bottom border-2 border-blue-1">
+                                <p class="nav_bottom__drop__add-menu__link_text text-capitalize my-0 text-start text-white-1">Phenolic Molding Materials</p>
+                                <div class="nav_bottom__drop__add-menu__arrow position-relative"></div>
+                            </div>
+                            <a href=pmc.html class="stretched-link"></a>
+                        </div>
+                        
+                        <div class="wrapper position-relative">
+                            <div class="nav_bottom__drop__add-menu__link-cont py-2 col-12 d-flex justify-content-between align-items-center border-bottom border-2 border-blue-1">
+                                <p class="nav_bottom__drop__add-menu__link_text text-capitalize my-0 text-start text-white-1">BMC/ Thermoset Polyester Molding Materials</p>
+                                <div class="nav_bottom__drop__add-menu__arrow position-relative"></div>
+                            </div>
+                            <a href=bmc.html class="stretched-link"></a>
+                        </div>
+                        
+                        <div class="wrapper position-relative">
+                            <div class="nav_bottom__drop__add-menu__link-cont py-2 col-12 d-flex justify-content-between align-items-center border-bottom border-2 border-blue-1">
+                                <p class="nav_bottom__drop__add-menu__link_text text-capitalize my-0 text-start text-white-1">Melamine-Phenolic Molding Materials</p>
+                                <div class="nav_bottom__drop__add-menu__arrow position-relative"></div>
+                            </div>
+                            <a href=mp-mm.html class="stretched-link"></a>
+                        </div>
+                        
+                    </div>
+                </div>
+                <a href="products.html" class="btn btn-yellow-1 nav_bottom__drop__add-menu__button w-100 p-3 h-auto" id="nav_bottom__view-products">View All products</a>
+            </div>
+            <div class="nav__drop__opacity-block col-12 m-0 p-0 opacity-75 bg-blue-3"></div>
+        </div>
+
+        
+    </div>
+
+
+
+
+
+
+
+
+
+
+    
+
+    <div class="nav-section_markets bg-blue-3 overflow-hidden collapse col-12 position-fixed" data-obj="nav-section_markets" data-bs-toggle="false" data-nav-collapsed>
+        <div class="container">
+            <h2 class="nav-section_markets__header mb-0 text-white-1 text-uppercase">Markets & Applications</h2>
+            <div class="nav-section_markets__items row d-flex justify-content-between flex-wrap mt-4 gy-4 mx-n3">
+                
+                    <div class="nav-section_markets__item-wrap col-4 px-3 text-white-1 position-relative">
+                        <div class="nav-section_markets__item bg-blue-1 d-flex align-items-center px-3 mb-0">
+                            <img src=./assets/img/svg/tyre.svg alt=Automotive class="nav-section_markets__item__icon">
+                            <h2 class="nav-section_markets__item__text text-capitalize ms-4 mb-0">Automotive</h2>
+                            <a href=automotive.html class="stretched-link"></a>
+                        </div>
+                    </div>
+                
+                    <div class="nav-section_markets__item-wrap col-4 px-3 text-white-1 position-relative">
+                        <div class="nav-section_markets__item bg-blue-1 d-flex align-items-center px-3 mb-0">
+                            <img src=./assets/img/svg/bolt.svg alt=Electrical Insulation class="nav-section_markets__item__icon">
+                            <h2 class="nav-section_markets__item__text text-capitalize ms-4 mb-0">Electrical Insulation</h2>
+                            <a href=electrical-insulation.html class="stretched-link"></a>
+                        </div>
+                    </div>
+                
+                    <div class="nav-section_markets__item-wrap col-4 px-3 text-white-1 position-relative">
+                        <div class="nav-section_markets__item bg-blue-1 d-flex align-items-center px-3 mb-0">
+                            <img src=./assets/img/svg/pot.svg alt=Home & Commercial Kitchen class="nav-section_markets__item__icon">
+                            <h2 class="nav-section_markets__item__text text-capitalize ms-4 mb-0">Home & Commercial Kitchen</h2>
+                            <a href=home-commercial.html class="stretched-link"></a>
+                        </div>
+                    </div>
+                
+                    <div class="nav-section_markets__item-wrap col-4 px-3 text-white-1 position-relative">
+                        <div class="nav-section_markets__item bg-blue-1 d-flex align-items-center px-3 mb-0">
+                            <img src=./assets/img/svg/v-engine.svg alt=Small Engine class="nav-section_markets__item__icon">
+                            <h2 class="nav-section_markets__item__text text-capitalize ms-4 mb-0">Small Engine</h2>
+                            <a href=small-engine.html class="stretched-link"></a>
+                        </div>
+                    </div>
+                
+                    <div class="nav-section_markets__item-wrap col-4 px-3 text-white-1 position-relative">
+                        <div class="nav-section_markets__item bg-blue-1 d-flex align-items-center px-3 mb-0">
+                            <img src=./assets/img/svg/light-bulb.svg alt=Lighting class="nav-section_markets__item__icon">
+                            <h2 class="nav-section_markets__item__text text-capitalize ms-4 mb-0">Lighting</h2>
+                            <a href=lighting.html class="stretched-link"></a>
+                        </div>
+                    </div>
+                
+                    <div class="nav-section_markets__item-wrap col-4 px-3 text-white-1 position-relative">
+                        <div class="nav-section_markets__item bg-blue-1 d-flex align-items-center px-3 mb-0">
+                            <img src=./assets/img/svg/valve.svg alt=Oil & Gas class="nav-section_markets__item__icon">
+                            <h2 class="nav-section_markets__item__text text-capitalize ms-4 mb-0">Oil & Gas</h2>
+                            <a href=oil-gas.html class="stretched-link"></a>
+                        </div>
+                    </div>
+                
+            </div>
+            <a href="markets-applications.html" class="btn btn-yellow-1 nav-section_markets__button col-6 mx-auto px-3" id="nav-section_markets__view-all">View all Markets & Applications</a>
+        </div>
+    </div>
+
+
+    <div class="nav-section_products bg-blue-3 overflow-hidden collapse position-fixed col-12" data-obj="nav-section_products"  data-bs-toggle="false" data-nav-collapsed>
+        <div class="container">
+            <h2 class="nav-section_products__header text-white-1 text-uppercase">Plenco’s Products</h2>
+            <div class="nav-section_products__items d-flex justify-content-between flex-wrap mt-4 mx-n3">
+                
+                    <div class="nav-section_products__item-wrap col-3 mx-0 px-3 text-white-1 position-relative">
+                        <div class="nav-section_products__item bg-blue-1 d-flex flex-column align-items-center cursor-pointer px-2 py-4">
+                            <div class="nav-section_products__item__inner-cont d-flex align-items-center col-12 h-100 pb-1">
+                                <p class="nav-section_products__item__text ms-0 text-capitalize mb-0">Phenolic Novolac & Resol Resins</p>
+                            </div>
+                            <div class="border-5 border w-100 border-blue-l2"></div>
+                            <a href=pn-rr.html class="stretched-link"></a>
+                        </div>
+                    </div>
+                
+                    <div class="nav-section_products__item-wrap col-3 mx-0 px-3 text-white-1 position-relative">
+                        <div class="nav-section_products__item bg-blue-1 d-flex flex-column align-items-center cursor-pointer px-2 py-4">
+                            <div class="nav-section_products__item__inner-cont d-flex align-items-center col-12 h-100 pb-1">
+                                <p class="nav-section_products__item__text ms-0 text-capitalize mb-0">Phenolic Molding Materials</p>
+                            </div>
+                            <div class="border-5 border w-100 border-blue-l2"></div>
+                            <a href=pmc.html class="stretched-link"></a>
+                        </div>
+                    </div>
+                
+                    <div class="nav-section_products__item-wrap col-3 mx-0 px-3 text-white-1 position-relative">
+                        <div class="nav-section_products__item bg-blue-1 d-flex flex-column align-items-center cursor-pointer px-2 py-4">
+                            <div class="nav-section_products__item__inner-cont d-flex align-items-center col-12 h-100 pb-1">
+                                <p class="nav-section_products__item__text ms-0 text-capitalize mb-0">BMC/ Thermoset Polyester Molding Materials</p>
+                            </div>
+                            <div class="border-5 border w-100 border-blue-l2"></div>
+                            <a href=bmc.html class="stretched-link"></a>
+                        </div>
+                    </div>
+                
+                    <div class="nav-section_products__item-wrap col-3 mx-0 px-3 text-white-1 position-relative">
+                        <div class="nav-section_products__item bg-blue-1 d-flex flex-column align-items-center cursor-pointer px-2 py-4">
+                            <div class="nav-section_products__item__inner-cont d-flex align-items-center col-12 h-100 pb-1">
+                                <p class="nav-section_products__item__text ms-0 text-capitalize mb-0">Melamine-Phenolic Molding Materials</p>
+                            </div>
+                            <div class="border-5 border w-100 border-blue-l2"></div>
+                            <a href=mp-mm.html class="stretched-link"></a>
+                        </div>
+                    </div>
+                
+            </div>
+            <a href="products.html" class="btn btn-yellow-1 nav-section_products__button button_yellow col-5 mx-auto" id="nav-section_products__view-all">View all Products</a>
+        </div>
+    </div>
+
+
+    <div class="nav-section_search position-fixed overflow-hidden collapse bg-blue-1 bg-opacity-75" data-obj="nav-section_search" data-bs-toggle="false" data-nav-collapsed>
+        <div class="container">
+            <form class="container nav-section_search-cont me-0 col-10 col-lg-8 col-xl-7 pt-5 pb-4 bg-blue-3">
+                <p class="nav-section_search__header text-blue-l2">search the plenco website</p>
+                <div class="nav-section_search__input-cont ps-0 border-bottom border-5 border-blue-l3">
+                    <input type="text" class="nav-section_search__input ps-0 col-100 text-white-1 bg-transparent" placeholder="Search">
+                </div>
+                <div class="nav-section_search__checkboxes d-flex mt-4">
+                    <div class="form-check form-check-inline nav-section_search__checkbox-item me-5 ps-0">
+                        <input type="checkbox" class="form-check-input nav-section_search__checkbox position-absolute opacity-0" id="search__filter-1" value="filter-1" name="search__check_1">
+                        <label for="search__filter-1" class="form-check-label nav-section_search__label d-inline-flex align-items-center text-blue-l2">Filter1</label>
+                    </div>
+                    <div class="form-check form-check-inline nav-section_search__checkbox-item me-5 ps-0">
+                        <input type="checkbox" class="form-check-input nav-section_search__checkbox position-absolute opacity-0" id="search__filter-2" value="filter-2" name="search__check_2">
+                        <label for="search__filter-2" class="form-check-label nav-section_search__label d-inline-flex align-items-center text-blue-l2">Filter2</label>
+                    </div>
+                    <div class="form-check form-check-inline nav-section_search__checkbox-item me-5 ps-0">
+                        <input type="checkbox" class="form-check-input nav-section_search__checkbox position-absolute opacity-0" id="search__filter-3" value="filter-3" name="search__check_3">
+                        <label for="search__filter-3" class="form-check-label nav-section_search__label d-inline-flex align-items-center text-blue-l2">Filter3</label>
+                    </div>
+                    <div class="form-check form-check-inline nav-section_search__checkbox-item me-5 ps-0">
+                        <input type="checkbox" class="form-check-input nav-section_search__checkbox position-absolute opacity-0" id="search__filter-4" value="filter-4" name="search__check_4">
+                        <label for="search__filter-4" class="form-check-label nav-section_search__label d-inline-flex align-items-center text-blue-l2">Filter4</label>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-yellow-1 nav-section_search__button col-4 offset-4 mt-4">search</button>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+</header> 
+
+
+     
+    <a type="button" class="nav_side__btn-msg d-none d-md-flex flex-column navbtn position-fixed align-items-center justify-content-center px-0 bg-blue-l3 end-0 text-decoration-none text-black-1 d-md-none" data-navbtn="contact_modal"> 
+    <img src="./assets/img/svg/chat.svg" alt="Chat" class="nav_side__btn-msg__icon">
+    <span class="nav_side__btn-msg__text_1 text-uppercase">Message</span>
+    <span class="nav_side__btn-msg__text_2">Plenco</span>
+</a>
+
+
+
+
+<!-- Modal ContactUs-->
+<div class="modal fade needs-validation novalidate" data-obj="contactUsModal" tabindex="-1" aria-labelledby="" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered contactUsModal-cont mx-0 mx-sm-auto">
+    <div class="modal-content contactUsModal rounded-0 bg-blue-l1 px-4 px-md-5">
+      	<div class="modal-header contactUsModal__header-cont m-0 p-0 border-0">
+			<h2 class="modal-title contactUsModal__header p-0 mt-4 mt-md-5" id="exampleModalLabel">Contact <span class="text-blue-1">Plenco</span></h2>
+			<button type="button" class="btn-close contactUsModal__btn_close button_arrow_60_r position-absolute top-0 end-0 p-0 m-0 bg-yellow-1 opacity-100 border-0" data-bs-dismiss="modal" aria-label="Close" data-obj="contactUsModal__btn_close"></button>
+    	</div>
+      	<form class="modal-body contactUsModal__body border-start border-5 border-blue-l2 ps-0 ps-md-4 pe-0 py-0 mt-2" id="contactUsModalForm">
+            <div class="contactUsModal__body__inputs-wrap px-0 w-auto d-flex flex-wrap justify-content-between mx-n3">
+                <div class="block_input_2__inputarea col-12 col-md-6 px-3 d-flex flex-column align-items-start mb-4">
+                    <label class="modal-body__header mb-2 text-capitalize" for="modal-contact_name-first">First Name*</label>
+                    <input type="text" class="form-control modal-body__input validate col-12 px-3" id="modal-contact_name-first" placeholder="First Name" required data-validate data-obj="modal-body__input">
+                  </div> 
+                <div class="block_input_2__inputarea col-12 col-md-6 px-3 d-flex flex-column align-items-start mb-4">
+                    <label class="modal-body__header mb-2 text-capitalize" for="modal-contact_name-last">Last Name*</label>
+                    <input type="text" class="form-control modal-body__input validate col-12 px-3" id="modal-contact_name-last" placeholder="Last Name" required data-validate data-obj="modal-body__input">
+                </div> 
+                <div class="block_input_2__inputarea col-12 col-md-6 px-3 d-flex flex-column align-items-start mb-4">
+                    <label class="modal-body__header mb-2 text-capitalize" for="modal-contact_email">Email Address*</label>
+                    <input type="email" class="form-control modal-body__input validate col-12 px-3" id="modal-contact_email" placeholder="mail@adress.com" required data-validate data-obj="modal-body__input">
+                </div> 
+                <div class="block_input_2__inputarea col-12 col-md-6 px-3 d-flex flex-column align-items-start mb-4">
+                    <label class="modal-body__header mb-2 text-capitalize" for="modal-contact_phone">phone number</label>
+                    <input type="tel" class="form-control modal-body__input validate col-12 px-3" id="modal-contact_phone" placeholder="(000) 000-0000" data-validate data-obj="modal-body__input">
+                </div> 
+                <div class="block_input_2__inputarea col-12 px-3 d-flex flex-column align-items-start mb-4">
+                    <label class="modal-body__header mb-2 text-capitalize" for="modal-contact_company">Company Name</label>
+                    <input type="text" class="form-control modal-body__input col-12 px-3" id="modal-contact_company" placeholder="My Company’s Name" data-validate data-obj="modal-body__input">
+                </div> 
+                <div class="block_input_2__inputarea col-12 px-3 d-flex flex-column align-items-start mb-0">
+                    <label class="modal-body__header mb-2 text-capitalize" for="modal-contact_message">message</label>
+                    <textarea type="text" class="form-control modal-body__input col-12 px-3" id="modal-contact_message" placeholder="Write your message" style="height: 119px"  data-obj="modal-body__input"></textarea>
+                    <p class="form-text contactUsModal__add-text mb-0 w-100 px-0 mt-1">*fields are required. Our team will try to respond as soon as we can.</p> 
+                </div> 
+            </div>
+            <button type="submit" form="contactUsModalForm" class="btn btn-yellow-1 contactUsModal__btn_submit mx-auto position-relative" data-obj="contactUsModal__btn_submit">Submit</button>
+      	</form>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal emailSignUp-->
+<div class="modal fade needs-validation novalidate" data-obj="emailSignUpModal" tabindex="-1" aria-labelledby="" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered emailSignUpModal-cont mx-0 mx-sm-auto">
+    <div class="modal-content emailSignUpModal rounded-0 bg-blue-l1 px-4 px-md-5">
+      	<div class="modal-header emailSignUpModal__header-cont m-0 p-0 border-0 d-flex flex-column mt-5 mb-md-3">
+			<img src="./assets/img/svg/logo_plenco_blue.svg" alt="Plenco Logo" class="modal_logo mt-3">
+			<h2 class="modal-title emailSignUpModal__header p-0 mt-4 mt-md-5 align-self-start" id="exampleModalLabel">Email Sign-Up <span class="text-blue-1">Pop-Up</span></h2>
+        	<button type="button" class="btn-close emailSignUpModal__btn_close button_arrow_60_r position-absolute top-0 end-0 p-0 m-0 bg-yellow-1 opacity-100 border-0" data-bs-dismiss="modal" aria-label="Close" data-obj="emailSignUpModal__btn_close"></button>
+      	</div>
+      	<form class="modal-body emailSignUpModal__body border-start border-5 border-blue-l2 ps-0 ps-md-4 pe-0 py-0 mt-2 pt-3" id="emailSignUpModalForm">
+            <div class="emailSignUpModal__body__inputs-wrap px-0 w-auto d-flex flex-wrap justify-content-between mx-n3">
+				<p class="text_add px-3">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna</p>
+				<div class="block_input_2__inputarea col-12 col-md-12 px-3 d-flex flex-column align-items-start mb-4">
+                    <label class="modal-body__header mb-2 text-capitalize" for="modal-email-signup_email">Email Address*</label>
+                    <input type="email" class="form-control modal-body__input validate col-12 px-3" id="modal-email-signup_email" placeholder="mail@adress.com" required data-obj="modal-body__input" data-validate>
+                </div> 
+				<div class="block_input_2__inputarea col-12 col-md-6 px-3 d-flex flex-column align-items-start mb-4">
+                    <label class="modal-body__header mb-2 text-capitalize" for="modal-email-signup_name-first">First Name*</label>
+                    <input type="text" class="form-control modal-body__input validate col-12 px-3" id="modal-email-signup_name-first" placeholder="First Name" required data-obj="modal-body__input" data-validate>
+                  </div> 
+                <div class="block_input_2__inputarea col-12 col-md-6 px-3 d-flex flex-column align-items-start mb-4">
+                    <label class="modal-body__header mb-2 text-capitalize" for="modal-email-signup_name-last">Last Name*</label>
+                    <input type="text" class="form-control modal-body__input validate col-12 px-3" id="modal-email-signup_name-last" placeholder="Last Name" required data-obj="modal-body__input" data-validate>
+                </div> 
+            </div>
+			<p class="form-text emailSignUpModal__add-text mb-0 w-100 px-0 mt-n2">By signing up, you agree to Plenco’s <a class="text-black-1 modal_link" href="priv-policy.html">Privacy Policy</a> and <a class="text-black-1 modal_link" href="terms-conditions.html">Terms and Conditions</a>.</p> 
+			<div class="btn-container d-flex flex-column flex-md-row align-items-center justify-content-center mt-4">
+				<div class="mock me-5 opacity-0 d-none d-md-block">No Thanks</div>
+				<button type="submit" form="emailSignUpModalForm" class="btn btn-yellow-1 emailSignUpModal__btn_submit mt-2 mt-md-0" data-obj="emailSignUpModal__btn_submit">Sign Up</button>
+				<a type="button" class="position-relative text-black-1 ms-md-5 mt-3 mt-md-0" data-bs-dismiss="modal" aria-label="Close">No Thanks</a>
+			</div>
+		</form>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal emailDownload-->
+<div class="modal fade needs-validation novalidate" data-obj="emailDownloadModal" tabindex="-1" aria-labelledby="" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered emailDownloadModal-cont mx-0 mx-sm-auto">
+	  <div class="modal-content emailDownloadModal rounded-0 bg-blue-l1 px-4 px-md-5">
+			<div class="modal-header emailDownloadModal__header-cont m-0 p-0 border-0 d-flex flex-column mt-5 mb-md-3">
+			  <h2 class="modal-title emailDownloadModal__header p-0 mt-4 mt-md-5 align-self-start" id="exampleModalLabel">Download Resource Email Capture <span class="text-blue-1">Heading</span></h2>
+			  <button type="button" class="btn-close emailDownloadModal__btn_close button_arrow_60_r position-absolute top-0 end-0 p-0 m-0 bg-yellow-1 opacity-100 border-0" data-bs-dismiss="modal" aria-label="Close" data-obj="emailDownloadModal__btn_close"></button>
+			</div>
+			<form class="modal-body emailDownloadModal__body border-start border-5 border-blue-l2 ps-0 ps-md-4 pe-0 py-0 mt-2 pt-3" id="emailDownloadModalForm">
+			  <div class="emailDownloadModal__body__inputs-wrap px-0 w-auto d-flex flex-wrap justify-content-between mx-n3">
+				  <p class="text_add px-3">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna</p>
+				  <div class="block_input_2__inputarea col-12 col-md-6 px-3 d-flex flex-column align-items-start mb-4">
+					  <label class="modal-body__header mb-2 text-capitalize" for="modal-email-download_name-first">First Name*</label>
+					  <input type="text" class="form-control modal-body__input validate col-12 px-3" id="modal-email-download_name-first" placeholder="First Name" required data-obj="modal-body__input" data-required>
+					</div> 
+				  <div class="block_input_2__inputarea col-12 col-md-6 px-3 d-flex flex-column align-items-start mb-4">
+					  <label class="modal-body__header mb-2 text-capitalize" for="modal-email-download_name-last">Last Name*</label>
+					  <input type="text" class="form-control modal-body__input validate col-12 px-3" id="modal-email-download_name-last" placeholder="Last Name" required data-obj="modal-body__input" data-required>
+				  </div> 
+				  <div class="block_input_2__inputarea col-12 col-md-6 px-3 d-flex flex-column align-items-start mb-4">
+					<label class="modal-body__header mb-2 text-capitalize" for="modal-email-download_email">Email Address*</label>
+					<input type="email" class="form-control modal-body__input validate col-12 px-3" id="modal-email-download_email" placeholder="mail@adress.com" required data-obj="modal-body__input" data-required>
+				</div> 
+				<div class="block_input_2__inputarea col-12 col-md-6 px-3 d-flex flex-column align-items-start mb-4">
+                    <label class="modal-body__header mb-2 text-capitalize" for="modal-email-download_company">Company Name</label>
+                    <input type="text" class="form-control modal-body__input col-12 px-3" id="modal-email-download_company" placeholder="My Company’s Name"  data-obj="modal-body__input">
+                </div> 
+				<div class="block_input_2__inputarea col-12 col-md-6 px-3 d-flex flex-column align-items-start mb-2">
+                    <label class="modal-body__header mb-2 text-capitalize" for="modal-email-download_company">Industry</label>
+					
+					<div class="accordion accordion-flush emailDownloadModal_accordion col-12" id="accordion-emailDownloadModal" data-obj="accordion-emailDownloadModal">
+						<div class="accordion-item mb-2">
+							<h2 class="accordion-header" id="acc-emailDownloadModal__header-1">
+								<button data-obj="accordion-emailDownloadModal__button" class="accordion-button d-flex align-items-center justify-content-between position-relative collapsed bg-blue-1 ps-4" type="button" data-bs-toggle="collapse" data-bs-target="#acc-emailDownloadModal__body-1" aria-expanded="true" aria-controls="acc-emailDownloadModal__body-1">
+									<p class="d-block mb-0 text-white-1 pe-4" id="accordion-emailDownloadModal__current">Select industry</p> 
+								</button>
+							</h2>
+							<div id="acc-emailDownloadModal__body-1" class="accordion-collapse collapse" aria-labelledby="acc-emailDownloadModal__header-1" data-bs-parent="#accordion-emailDownloadModal" data-obj="acc-emailDownloadModal__body-1">
+								<div class="accordion-body pb-2 pt-0">
+									<div role="button" class="accordion-body__item d-flex align-items-center bg-blue-1 px-4 border border-1 border-blue-3 hover">
+										<span role="button" class="accordion__text-2 accordion-emailDownloadModal__select mb-0 text-white-1">Select industry</span>
+									</div>
+									<div role="button" class="accordion-body__item d-flex align-items-center bg-blue-1 px-4 border border-1 border-blue-3">
+										<span role="button" class="accordion__text-2 accordion-emailDownloadModal__select mb-0 text-white-1">1</span>
+									</div>
+									<div role="button" class="accordion-body__item d-flex align-items-center bg-blue-1 px-4 border border-1 border-blue-3">
+										<span role="button" class="accordion__text-2 accordion-emailDownloadModal__selectmb-0 text-white-1">2</span>
+									</div>
+									<div role="button" class="accordion-body__item d-flex align-items-center bg-blue-1 px-4 border border-1 border-blue-3">
+										<span role="button" class="accordion__text-2 accordion-emailDownloadModal__select mb-0 text-white-1">3</span>
+									</div>  
+								</div>
+							</div>
+						</div>
+					</div>
+
+                </div>
+				<input type="text" class="form-control modal-body__input d-none" data-obj="emailDownloadModal-industry-input" placeholder=""  data-obj="modal-body__input">
+
+				<div class="block_input_2__inputarea col-12 col-md-6 px-3 d-flex flex-column align-items-start mb-4 mt-md-4 h-100">
+					<p class="form-text emailDownloadModal__add-text mb-0 w-100 px-0 col-12 col-md-6 mt-0 mt-md-3">By signing up, you agree to Plenco’s <a class="text-black-1 modal_link" href="priv-policy.html">Privacy Policy</a> and <a class="text-black-1 modal_link" href="terms-conditions.html">Terms and Conditions</a>.</p> 
+				</div>
+			  </div>
+			  <div class="btn-container d-flex flex-column flex-md-row align-items-center justify-content-center mt-md-4">
+				  <div class="mock me-5 opacity-0 d-none d-md-block">No Thanks</div>
+				  <button type="submit" form="emailDownloadModalForm" class="btn btn-yellow-1 emailDownloadModal__btn_submit mt-2 mt-md-0" data-obj="emailDownloadModal__btn_submit">Download</button>
+				  <a type="button" class="position-relative text-black-1 ms-md-5 mt-3 mt-md-0" data-bs-dismiss="modal" aria-label="Close">No Thanks</a>
+			  </div>
+		  </form>
+	  </div>
+	</div>
+  </div>
+  
+
+    <div class=" col-12 px-0 row section_heading_top_bg pt-0 section_heading_top overflow-hidden position-relative">
+    <div class="section_heading_top__bg_img-cont p-0 m-0 position-absolute bg-blue-1">
+        <div class="section_heading_top__bg_img p-0 m-0  w-100" style="background-image:  url(./assets/img/pages/pn-rr-app/heading.jpg)"></div>
+    </div>
+    <div class="section_heading_top px-0 col-12">
+        <div class="container cont-site">
+            <div class="section_heading_top__center-block__cont bg-blue-3 position-relative col-12 col-sm-9  mx-auto col-md-7 col-lg-6 overline overline_mob d-flex flex-column justify-content-center align-items-center px-3">
+                <h3 class="text-center my-0 text-blue-l2 text-uppercase">  </h3>
+                <h1 class="section_heading_top__center__header text-center my-0 text-white-1"> Phenolic Novolac & Resol Resins Applications </h1>
+            </div>            
+        </div>
+    </div>
+</div>
+    
+    <div class="row section_heading_bottom bg-blue-3">
+        <div class="col px-0">
+            <div class="container cont-site d-flex flex-column justify-content-center h-100">
+                <div>
+                    <p class="text_heading_main text-white-1 mb-0">Plastics Engineering Company manufactures an extensive range of products for many application fields that benefit from the outstanding characteristics and <span class='text-blue-l2'>performance advantages of phenolic resins</span>.</p>
+                </div> 
+                <div>                     
+                    <p class="text_heading_add pt-4 text-white-1">We welcome the opportunity to be of service to your company, and to customize a Plenco phenolic resin specifically for your application.</p> 
+                </div>                
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+ 
+
+    <div class="row section_37 overflow-hidden">
+        <div class="col px-0">
+            <div class="container cont-site col-12 d-flex mt-0">
+                <div class="section_37__left col-3 pe-5 d-none d-md-block ">
+                    <div class="section_37__left__content-cont border-start border-7 border-blue-l2 ms-n3 ps-3 py-3">
+                        <a href="pn-rr.html" class="section_28__left__link text-decoration-none d-flex">
+                            <h3 class="text-blue-1 mb-0">Phenolic Novolac & Resol Resins Main Page</h3>
+                        </a>
+                        <a href="novolac-resins.html" class="section_28__left__link text-decoration-none mt-4 d-flex">
+                            <h3 class="text-blue-1 mb-0">Novolac Resins</h3>
+                        </a>
+                        <a href="resol-resins.html" class="section_28__left__link text-decoration-none mt-4 d-flex">
+                            <h3 class="text-blue-1 mb-0">Resol Resins</h3>
+                        </a>
+
+                        <div class="accordion accordion-flush section_37_accordion_subnav mt-4 col-12" id="section_37_acc_subnav">
+                            <div class="row ">
+                                <div class="acc__item-wrap col-12 px-0">
+                                    <div class="accordion-item ">
+                                        <h2 class="accordion-header" id="acc-subnav__header-1">
+                                            <button class="accordion-button d-flex align-items-center justify-content-between position-relative bg-white-1" type="button" data-bs-toggle="collapse" data-bs-target="#acc-subnav__body-1" aria-expanded="true" aria-controls="acc-subnav__body-1">
+                                                <h3 class="accordion-header d-block mb-0 text-uppercase text-blue-l2">Resin Applications</h3> 
+                                            </button>
+                                        </h2>
+                                        <div id="acc-subnav__body-1" class="accordion-collapse collapse show" aria-labelledby="acc-subnav__header-1" data-bs-parent="">
+                                            <ul class="accordion-body pt-2 pb-0 ul_4 mb-0">
+                                                <li class="ul_4__text"><a href="#ablation" class="text-decoration-none text-black-1">Ablation</a></li>
+                                                <li class="ul_4__text"><a href="#abrasives" class="text-decoration-none text-black-1">Abrasives</a></li>
+                                                <li class="ul_4__text"><a href="#adhesives" class="text-decoration-none text-black-1">Adhesives</a></li>
+                                                <li class="ul_4__text"><a href="#carbon" class="text-decoration-none text-black-1">Carbon</a></li>
+                                                <li class="ul_4__text"><a href="#coatings" class="text-decoration-none text-black-1">Coatings</a></li>
+                                                <li class="ul_4__text"><a href="#composites" class="text-decoration-none text-black-1">Composites</a></li>
+                                                <li class="ul_4__text"><a href="#bonding" class="text-decoration-none text-black-1">Felt Bonding</a></li>
+                                                <li class="ul_4__text"><a href="#foam" class="text-decoration-none text-black-1">Foam</a></li>
+                                                <li class="ul_4__text"><a href="#foundry" class="text-decoration-none text-black-1">Foundry</a></li>
+                                                <li class="ul_4__text"><a href="#friction" class="text-decoration-none text-black-1">Friction</a></li>
+                                                <li class="ul_4__text"><a href="#proppants" class="text-decoration-none text-black-1">Proppants (Frac Sand)</a></li>
+                                                <li class="ul_4__text"><a href="#refractory" class="text-decoration-none text-black-1">Refractory</a></li>
+                                                <li class="ul_4__text"><a href="#rubber" class="text-decoration-none text-black-1">Rubber</a></li>
+                                                <li class="ul_4__text"><a href="#saturation" class="text-decoration-none text-black-1">Substrate Saturation</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                            </div>
+                        </div>
+
+
+                        <a class="section_28__left__link text-decoration-none mt-4 d-flex">
+                            <h3 class="text-blue-1 mb-0">Resin Applications</h3>
+                        </a>
+                        <a href="pn-rr.html" class="section_28__left__link text-decoration-none mt-4 d-flex">
+                            <h3 class="text-blue-1 mb-0">Resources</h3>
+                        </a> 
+                    </div>
+                </div>
+
+                <div class="section_37__right col-12 col-md-9 ps-md-5">
+                    <div class="section_37__data d-flex flex-column-reverse flex-lg-row position-relative align-items-center">
+                        <div class="section_37__textarea px-0 col-12 position-relative">
+                            <div class="section_37__textarea-wrap col-12">
+                                <div class="block_4 d-flex flex-column justify-content-between">
+                                    <div class="block_4__text-cont pe-3">
+                                        <div class="mock d-none d-lg-block float-end  ms-5 mb-5">
+                                            <div class="section_37__img-cont_dt position-relative  d-flex justify-content-end align-self-md-end  d-none d-lg-block">
+                                                <img src="./assets/img/pages/pn-rr-app/pn-rr-app.jpg" alt="Phenolic Novolac and Resol Resins Applications" class="section_37__image_dt position-relative d-none d-lg-block">
+                                            </div>
+                                        </div>
+                                        <h2 class="block_4__header section_37__header-line position-relative mb-0 text-start d-none d-md-block " id="case">Phenolic Novolac and Resol Resins <span class='text-blue-1 font-normal'>Applications</span></h2>
+                                        <h3 class="position-relative mb-0 text-start mt-4 text-blue-1 text-uppercase" id="ablation">Ablation</h3>                                        
+                                        <p class="text_add position-relative mb-0 text-lg-start mt-4">Phenolic resin chars when heated to temperatures greater than 480°F (250°C). This process continues at very high temperatures greater than 1,000°F (>500°C), until the resin completely converts to amorphous carbon. This characteristic contributes to the unique ablative properties of phenolic resins. An ablative surface is a heat shield designed to wear away in a controlled fashion at very high temperatures. Examples are rocket nozzles, rocket blast shields, and atmospheric reentry shields. Several aerospace ablative applications specify Plenco resins.</p>
+                                                        
+                                        <h3 class="position-relative mb-0 text-start mt-5 text-blue-1 text-uppercase" id="abrasives">Abrasives</h3>                                        
+                                        <p class="text_add position-relative mb-0 text-lg-start mt-4">The variety of abrasive products available in the market is practically endless, as they have to meet the specific needs of the individual grinding applications and substrates. Applications range from simple cut off wheels to precision sanding tasks, and involve materials like metal, wood, minerals, and composites. Generally, there are three groups of abrasive products: bonded, coated, and non-woven.</p>
+                                        
+                                        <p class="text_heading_add position-relative mb-0 text-lg-start mt-4">Bonded Abrasives:</p>
+                                        <p class="text_add position-relative mb-0 text-lg-start mt-4">Bonded abrasives like grinding wheels are comprised of abrasive particles embedded in a bonding matrix. While the grit used may be from a wide variety of minerals and abrasive particles, phenolic resin is the matrix binder of choice. Achieving the optimal combination of resistance to burst or fracture strength, flexibility and porosity, coupled to the manufacturing method, requires optimization of the binding resin to the specific application of the wheel in question. Modification of the blend of phenolic novolac powder, hexa, and liquid resol resin is usually needed to achieve such optimization. For increased strength, fiberglass reinforcement inlays are used. These inlays are themselves typically saturated with a special liquid phenolic resin.</p>
+                                        <p class="text_add position-relative mb-0 text-lg-start mt-4">Plastics Engineering Company tailors powdered and liquid resins for bonded abrasives to the specific needs of the customers and their unique cold forming or hot molding process. Accelerated cure resins are available as well as dust reduced powdered novolac-hexa products. Plenco resins are available as solvent-based flexible phenolic resins for use in fiberglass reinforcement inlays as well.</p>
+
+                                        
+                                        <p class="text_heading_add position-relative mb-0 text-lg-start mt-4">Coated Abrasives:</p>
+                                        <p class="text_add position-relative mb-0 text-lg-start mt-4">Coated abrasives are flexible grinding materials typically available as sheets, discs or belts. These applications require abrasive grains fixed to the surface of a variety of backings, like paper or fabric, by special liquid phenolic resin binders. The manufacture of coated abrasives with their unique properties requires multiple production steps. Plenco resins in solvent or aqueous liquid solutions meet the special requirements of this application.</p>
+
+
+                                        <p class="text_heading_add position-relative mb-0 text-lg-start mt-4">Non-Woven Abrasives:</p>
+                                        <p class="text_add position-relative mb-0 text-lg-start mt-4">Household and industrial applications use non-woven abrasives, also called abrasive pads. The characteristically green pads used for cleaning the dishes are the most publicly visible non-woven abrasive. Manufacturers of non-woven abrasive parts typically employ the use of liquid phenolic binders. Plenco phenolic resins provide the excellent wetting properties and the short drying times needed by abrasive pad manufacturers to meet the technical requirements while achieving a high line speed for improved productivity.</p>
+
+                                        <h3 class="position-relative mb-0 text-start mt-5 text-blue-1 text-uppercase" id="adhesives">Adhesives</h3> 
+                                        <p class="text_add position-relative mb-0 text-lg-start mt-4">Wood bonding applications such as particleboard or wafer-board have traditionally used phenolic resin binders. Due to their specific “affinity” for wood and wood fibers, special liquid phenolic resins may be required for the specialty wood adhesives industry typically in combination with a polyvinylacetate (PVAc) backbone polymer. Plenco liquid phenolic resol resins with low free phenol and low free formaldehyde contents are available especially for use in adhesive applications. Plastics Engineering Company can also supply low ash content, soluble solid resol resins, and of course a wide range of novolac resin-hexa systems.</p>   
+
+                                        <h3 class="position-relative mb-0 text-start mt-5 text-blue-1 text-uppercase" id="carbon">Carbon</h3> 
+                                        <p class="text_add position-relative mb-0 text-lg-start mt-4">Phenolic resins have an excellent affinity for graphitic and other forms of carbon. Manufacturers often use the resin simply as a binder and adhesive for their carbon materials. At high temperature, phenolic resins form a char of amorphous carbon. This means phenolic bonded carbon materials can be heat treated to yield an all carbon structure. Because of these unique properties, phenolic resins find application in the manufacture of electrodes, carbon-carbon composites, carbon seals, and washers. Phenolic resins are the binder of choice for manufacturing the carbon brushes used in electrical motors, starters and the like. Depending on the manufacturing process, powdered or liquid solutions of novolac resin-hexa blends, powdered resol resins, and liquid resol binding systems provide the desired binding properties. Several Plenco phenolic resins meet the requirements demanded by this technically challenging application.</p> 
+
+                                        <h3 class="position-relative mb-0 text-start mt-5 text-blue-1 text-uppercase" id="coatings">Coatings</h3> 
+                                        <p class="text_add position-relative mb-0 text-lg-start mt-4">Cured phenolic resins demonstrate exceptional chemical resistance. Railroad cars, storage tanks and heat transfer equipment are coated using phenolic resins as part of baked phenolic coating systems. Plenco straight phenolic resin systems approved for coating applications are available and the researchers at Plastics Engineering Company are ready to tailor a resin system to the requirements of the customer.</p> 
+
+                                        <h3 class="position-relative mb-0 text-start mt-5 text-blue-1 text-uppercase" id="composites">Composites</h3> 
+                                        <p class="text_add position-relative mb-0 text-lg-start mt-4">Phenolic resins are the polymer matrix of choice in composite products especially when meeting high flame, smoke and toxicity (FST) properties. Phenolic resins provide for excellent strength at elevated temperatures in a variety of environments and are compatible with a multitude of composite fibers and fillers. Multiple applications benefit by using phenolic resins in the following composite part manufacturing processes:</p>        
+                                        <ul class="ul_3 d-md-none mt-3 ps-4">
+                                            <li class="ul_3__text mt-2">Resin Transfer Molding</li>
+                                            <li class="ul_3__text mt-2">Pultrusion and Profile Extrusion</li>
+                                            <li class="ul_3__text mt-2">Filament Winding</li>
+                                            <li class="ul_3__text mt-2">Hand Lay-up</li>
+                                        </ul>
+                                        <p class="text_add position-relative mb-0 text-lg-start mt-4">Lightweight and high strength honeycomb structured core materials for aircraft and other aerospace applications utilize phenolic binding resins, usually in a dipping-saturating process. The composite manufacturing processes and components vary significantly from product to product and process to process so that customized Plenco phenolic resins are the best answer for our customers to find the optimum process and composite performance.</p>
+
+                                        <h3 class="position-relative mb-0 text-start mt-5 text-blue-1 text-uppercase" id="bonding">Felt Bonding</h3> 
+                                        <p class="text_add position-relative mb-0 text-lg-start mt-4">Fiber felt manufacturers use phenolic resins with reclaimed or virgin fibers to produce thermal and acoustical insulation for the automotive and household appliance industries. Felt manufacturers achieve optimum rigidity, sound absorption and acoustical insulation performance by varying the density of the felt product. The versatility of the phenolic resin to affect the part density mirrors the versatility of substrate fibers used. Phenolic resins provide exceptional resistance under all environmental conditions. Specific applications are:</p>        
+                                        <ul class="ul_3 d-md-none mt-3 ps-4">
+                                            <li class="ul_3__text mt-2">Functional components used in visible areas (e.g., package deck)</li>
+                                            <li class="ul_3__text mt-2">Below surface products used for padding and sound absorption (e.g., hood liner)</li>
+                                            <li class="ul_3__text mt-2">Rigid parts used as substrate for decorative material</li>
+                                        </ul>
+                                        <p class="text_add position-relative mb-0 text-lg-start mt-4">Felt manufacturers achieve specific performance requirements by judicious use of Plenco powder resins. Resin formulation provides for good mold release, improved compatibility with scrim materials, and accelerated cure speeds for production efficiency. Environmental considerations continue to grow in importance. Plenco phenolic resins for felt bonding applications exhibit low emission and odor levels. Low dust level versions of Plenco phenolic resins are available also.</p>
+
+
+                                        <h3 class="position-relative mb-0 text-start mt-5 text-blue-1 text-uppercase" id="foam">Foam</h3> 
+                                        <p class="text_add position-relative mb-0 text-lg-start mt-4">Special phenolic resins in combination with the proper cure catalysts, surfactants and blowing agents produce foam products. Phenolic foam has a unique set of properties such as excellent fire and heat resistance and a low smoke and toxicity rating when burned. Proper surfactants produce closed cell foams with excellent insulating R-values. Other surfactants produce open cell foams demonstrating unique water absorption properties. Typical application fields are:</p>        
+                                        <ul class="ul_3 d-md-none mt-3 ps-4">
+                                            <li class="ul_3__text mt-2">Floral foam (dry and wet forms)</li>
+                                            <li class="ul_3__text mt-2">Orthopedic foam (for making foot print casts)</li>
+                                            <li class="ul_3__text mt-2">Insulating Foams</li>
+                                        </ul>
+                                        <p class="text_add position-relative mb-0 text-lg-start mt-4">Plenco phenolic resins are widely accepted by the foam industry for their superior consistency, crucial for the challenging production process.</p>
+
+                                        <h3 class="position-relative mb-0 text-start mt-5 text-blue-1 text-uppercase" id="foundry">Foundry</h3> 
+                                        <p class="text_add position-relative mb-0 text-lg-start mt-4">Many technologies are available to foundries for the production of dies for metal castings. Manufacturers using the shell molding process experience excellent dimensional accuracy, surface smoothness and high production rates using phenolic resin coated foundry sands. The shell molding process involves first creating mold cavities and cores by shaping sand coated with phenolic resin over a not metal form. Removed from the form and assembled, the mold and cores create the “negative” shape of the desired metal form. Hot metal is poured into the resin-sand mold and allowed to cool. Once hard, the excess resin-sand material is broken away revealing the metal part. Some recover the broken away sand for reuse. The careful selection of sand type, resin characteristics and coating method results in the desired mold and core properties such as strength, rigidity, flexibility, surface finish, part release and applicability to reuse.</p> 
+                                        <p class="text_add position-relative mb-0 text-lg-start mt-4">Plastics Engineering Company provides phenolic novolac sand coating resins in pastille form, for consistent melting and coating, efficient transport, and low dust. Resin formulations make use of proprietary accelerants, plasticizers or release agents to achieve a wide range of properties. These additives together with a customized phenol level, melt point, and hexa amount achieve optimal performance for each foundry’s requirements, like a low peel to improve release from the hot metal former. The Plenco product range includes resins for core sands, mold sands, and recyclable sand.</p>
+                                        
+
+                                        <h3 class="position-relative mb-0 text-start mt-5 text-blue-1 text-uppercase" id="friction">Friction</h3> 
+                                        <p class="text_add position-relative mb-0 text-lg-start mt-4">Phenolic thermoset resin is the choice for composite friction materials: the pads, blocks, linings, discs and adhesives used in brake & clutch systems that create retarding or holding forces with application against a moving part. The inherently heat resistant phenolic resin carbonizes and chars at extreme service temperatures, it does not melt and smear like other polymer matrices. This property results in restored friction properties when the material cools and “recovers” from hard braking. Formulas for phenolic composite friction materials are combinations of friction and wear-controlling agents, reinforcing fibers and inert fillers blended with un-cured phenolic resin in an amount necessary to bond the other ingredients in place with sufficient strength and resiliency when finished. Judicious selection of the types and amounts of raw materials used allows for the optimization of performance with cost and consistency.</p>
+                                        <p class="text_add position-relative mb-0 text-lg-start mt-4">Formulas for basic friction applications may contain 5 to 10 different ingredients while specialized material formulas may include a score or two of raw materials. Only one type of bonding resin is typically used. The effect of that one binder on the final composite’s properties depends on the total formulation and manufacturing method however. That is, no single type of resin product works optimally with all friction formulas or applications.</p>
+                                        <p class="text_add position-relative mb-0 text-lg-start mt-4">The salient step in the manufacture of phenolic composite friction materials is the molding and initial curing of the composite under heat and pressure. This molding step typically involves pressing a uniform blend of ingredients in a shaped mold preheated to 280° - 400°F (140° - 200°C) from one to three tons of pressure per square inch. The phenolic resin melts and flows during the molding operation to coat and then secure the other ingredients when the resin cross-links or “cures” to an infusible state. The resin’s performance during the hot molding step is most important to assuring an efficient manufacturing process. Friction material manufacturers select the type and amount of binder resin product used as a complement to the envisioned manufacturing process, its compatibility with other raw materials, environmental concerns and the expected service requirements.</p>
+                                        <p class="text_add position-relative mb-0 text-lg-start mt-4">To this end, Plastics Engineering Company is uniquely suited to assist friction material designers with a number of liquid and solid novolac (2-stage) and resol (1-stage) phenolic resins demonstrating a wide variety of flow and cure character combinations. The resins can be custom formulated with cure accelerating or performance enhancing additives. Plenco resins are suitable for all types of brake and clutch uses, including pads for lawn & garden equipment and automotive brakes, blocks for on and off road trucks, and linings for industrial, oil field and marine friction applications.</p>
+                                        
+
+                                        <h3 class="position-relative mb-0 text-start mt-5 text-blue-1 text-uppercase" id="proppants">Proppants (Frac Sand)</h3> 
+                                        <p class="text_add position-relative mb-0 text-lg-start mt-4">Oil and natural gas producers improve well yields using hydraulic fracturing fluids containing round specialty sands coated with phenolic resin. The industry refers to these sands as proppant or frac sands. The hydraulic fracturing fluid containing the proppant sand is pumped into the well effectively pressurizing the borehole and fracturing the surrounding rock. The fluid fills the nascent fissures and the resin-coated sand works as a prop to keep the fissure from sealing on release of pressure. Round sand is used to provide a porous medium through which the oil and gas can easily flow. Proprietary proppant sands made with Plenco resins continually improve petroleum yields every day.</p>
+
+                                        <h3 class="position-relative mb-0 text-start mt-5 text-blue-1 text-uppercase" id="refractory" >Refractory</h3> 
+                                        <p class="text_add position-relative mb-0 text-lg-start mt-4">High carbon yield, wear resistance, and excellent particle wetting and bonding properties make phenolic resins ideal for refractory products. There are two general categories of refractory products: shaped and unshaped. Hydraulically pressed refractory bricks, slide gates, shrouds, nozzles, and crucibles are examples of shaped products. Examples of unshaped products are tap-hole compounds, tundish liners and ramming mixes used in steel making. Plastics Engineering Company provides phenolic refractory resins as liquids in a variety of solvents, including water based systems. Manufacturers may also choose from a wide range of novolac-hexa powder resin products. Some companies combine phenolic resins with temperature resistant ceramic fibers in a vacuum forming process to manufacture riser sleeves, ladles, and hot toppings. This application typically uses novolac-hexa powder resins with low emission levels. Non-hexa cured Plenco resins are available for this application to reduce ammonia and formaldehyde emissions.</p>
+
+                                        <h3 class="position-relative mb-0 text-start mt-5 text-blue-1 text-uppercase" id="rubber">Rubber</h3> 
+                                        <p class="text_add position-relative mb-0 text-lg-start mt-4">Tires and technical rubber goods use straight phenolic novolac resins as reinforcing agents. Plenco novolac resin pastilles are the preferred choice for a manufacturer who compounds the resin into the rubber for superior mix consistency and reduced dusting when compared to using powders or resin in flaked form. Special effort assures consistent pastille size and shape to meet the requirements of the automated dosing systems used by the industry. Plenco phenolic novolac pastille resins are available in a variety of softening point and emission level versions. Some rubber applications require phenolic novolac-hexa powder resin products in combination with the rubber compound. Plastics Engineering Company provides novolac-hexa with customized flow and the hexa curing agent level specific to each application.</p>
+                                    
+                                        <h3 class="position-relative mb-0 text-start mt-5 text-blue-1 text-uppercase" id="saturation">Substrate Saturation</h3> 
+                                        <p class="text_add position-relative mb-0 text-lg-start mt-4">Many applications use liquid phenolic resins to saturate substrates such as paper, fabrics, and wood. Phenolic resins receive preference because of their high mechanical strength, outstanding chemical resistance, and good flame resistant properties. Typically, solvent-borne resol resins are used, but depending on the specific products and processes, aqueous resol resins or resol cured novolac resins in solvents are preferred. Typical application fields are:</p>        
+                                        <ul class="ul_3 d-md-none mt-3 ps-4">
+                                            <li class="ul_3__text mt-2">Paper laminates (decorative or functional)</li>
+                                            <li class="ul_3__text mt-2">Engineered wood</li>
+                                            <li class="ul_3__text mt-2">Filter paper impregnation (Oil filters, Gasoline filters, Air filters)</li>
+                                        </ul>
+                                        <p class="text_add position-relative mb-0 text-lg-start mt-4">Plastics Engineering Company provides resins for the full range of technologies used in this application field and works to customize specific phenolic resins to the requirements of the individual customer.</p>
+                    
+                                                        
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    </div>
+                                </div>    
+                            </div>
+                        </div>
+
+                        <div class="section_37__img-cont position-relative  d-flex justify-content-end align-self-md-end d-lg-none">
+                            <img src="./assets/img/pages/pn-rr-app/pn-rr-app.jpg" alt="Phenolic Novolac And Resol Resins Applications" class="section_37__image position-relative">
+                        </div>
+                        <h2 class="block_4__header section_37__header-line position-relative mb-4 text-start mt-5 mt-lg-0 d-md-none align-self-start">Phenolic Molding <span class='text-blue-1 font-normal'>Compounds</span></h2>
+                    
+                        <div class="accordion accordion-flush section_37_accordion d-md-none mt-5 col-12" id="oil-accordion-nav">
+                            <div class="row ">
+        
+                                <div class="acc__item-wrap col-12 px-0">
+                                    <div class="accordion-item ">
+                                        <h2 class="accordion-header border-bottom border-7 border-yellow-1" id="acc-nav__header-1">
+                                            <button class="accordion-button d-flex align-items-center justify-content-between position-relative bg-white-1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#acc-nav__body-1" aria-expanded="true" aria-controls="acc-nav__body-1">
+                                                <h3 class="accordion-header d-block mb-0 text-uppercase text-blue-1">Resin Applications</h3> 
+                                            </button>
+                                        </h2>
+                                        <div id="acc-nav__body-1" class="accordion-collapse collapse" aria-labelledby="acc-nav__header-1" data-bs-parent="">
+                                            <div class="accordion-body pt-2 pb-0">
+
+                                                <div class="accordion accordion-flush section_37_accordion_subnav mt-4 col-12" id="section_37_acc_subnav-2">
+                                                    <div class="row ">
+                                                        <div class="acc__item-wrap col-12 px-0">
+                                                            <div class="accordion-item ">
+                                                                <h2 class="accordion-header" id="acc-subnav-2__header-1">
+                                                                    <button class="accordion-button d-flex align-items-center justify-content-between position-relative bg-white-1" type="button" data-bs-toggle="collapse" data-bs-target="#acc-subnav-2__body-1" aria-expanded="true" aria-controls="acc-subnav-2__body-1">
+                                                                        <h3 class="accordion-header d-block mb-0 text-uppercase text-blue-l2">Resin Applications</h3> 
+                                                                    </button>
+                                                                </h2>
+                                                                <div id="acc-subnav-2__body-1" class="accordion-collapse collapse show" aria-labelledby="acc-subnav-2__header-1" data-bs-parent="">
+                                                                    <ul class="accordion-body pt-2 pb-0 ul_4 mb-0">
+                                                                        <li class="ul_4__text"><a href="#ablation" class="text-decoration-none text-black-1">Ablation</a></li>
+                                                                        <li class="ul_4__text"><a href="#abrasives" class="text-decoration-none text-black-1">Abrasives</a></li>
+                                                                        <li class="ul_4__text"><a href="#adhesives" class="text-decoration-none text-black-1">Adhesives</a></li>
+                                                                        <li class="ul_4__text"><a href="#carbon" class="text-decoration-none text-black-1">Carbon</a></li>
+                                                                        <li class="ul_4__text"><a href="#coatings" class="text-decoration-none text-black-1">Coatings</a></li>
+                                                                        <li class="ul_4__text"><a href="#composites" class="text-decoration-none text-black-1">Composites</a></li>
+                                                                        <li class="ul_4__text"><a href="#bonding" class="text-decoration-none text-black-1">Felt Bonding</a></li>
+                                                                        <li class="ul_4__text"><a href="#foam" class="text-decoration-none text-black-1">Foam</a></li>
+                                                                        <li class="ul_4__text"><a href="#foundry" class="text-decoration-none text-black-1">Foundry</a></li>
+                                                                        <li class="ul_4__text"><a href="#friction" class="text-decoration-none text-black-1">Friction</a></li>
+                                                                        <li class="ul_4__text"><a href="#proppants" class="text-decoration-none text-black-1">Proppants (Frac Sand)</a></li>
+                                                                        <li class="ul_4__text"><a href="#refractory" class="text-decoration-none text-black-1">Refractory</a></li>
+                                                                        <li class="ul_4__text"><a href="#rubber" class="text-decoration-none text-black-1">Rubber</a></li>
+                                                                        <li class="ul_4__text"><a href="#saturation" class="text-decoration-none text-black-1">Substrate Saturation</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                
+                                                    </div>
+                                                </div>
+
+
+
+                                                <a href="pn-rr.html" class="section_28__left__link text-decoration-none mt-4 d-flex">
+                                                    <h3 class="text-blue-1 mb-0">Phenolic Novolac & Resol Resins Main Page</h3>
+                                                </a>                                                
+                                                <a href="novolac-resins.html" class="section_28__left__link text-decoration-none mt-4 d-flex">
+                                                    <h3 class="text-blue-1 mb-0">Novolac Resins</h3>
+                                                </a>
+                                                <a href="resol-resins.html" class="section_28__left__link text-decoration-none mt-4 d-flex">
+                                                    <h3 class="text-blue-1 mb-0">Resol Resins</h3>
+                                                </a>
+                                                <a href="pn-rr.html" class="section_28__left__link text-decoration-none mt-4 d-flex">
+                                                    <h3 class="text-blue-1 mb-0">Resources</h3>
+                                                </a>  
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    
+
+
+    <div class="row section_107_bg h-100 p-0 m-0 overline-r overline_mob-r"> 
+        <div class="section_107 col-12 px-0 d-flex align-items-start align-items-md-center pt-5 pb-4 pb-lg-5">
+            <div class="container cont-site section_107__content col-md-12 d-flex flex-column flex-lg-row justify-content-start justify-content-md-between align-items-center mt-3 mt-md-0">
+                <div class="section_107__left col-lg-8 position-relative">
+                    <h1 class="section_107__header text-center text-lg-start text-blue-l3 mb-0">Learn More</h1>
+                    <p class="section_107__text text-center text-lg-start text-white-1 mb-0 pe-lg-4">About Phenolic Novolac and Resol Resin Applications</p>
+                </div>
+                <div class="section_107__right col-lg-4  position-relative align-self-center align-self-lg-end">
+                    <a type="button" class="btn btn-yellow-1 section_107__button ms-0 ms-md-4 mt-4 mt-lg-0 navbtn" data-navbtn="contact_modal">Contact Plenco</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+
+    
+
+
+
+    
+    <div class="row footer_bg position-relative">
+    <div class="footer__bg-cont position-absolute overflow-hidden">
+        <img src="./assets/img/plenco__logo_footer-main.png" alt="" class="footer__bg__img_main position-absolute">
+    </div>
+
+    <div class="footer px-0">
+        <div class="container cont-site col-12 px-36 d-flex flex-column d-md-flex flex-md-row justify-content-start pb-3 position-relative">
+
+            <div class="footer__block_left col-12 col-md-4 col-lg-3 offset-md-2 offset-lg-1 offset-xl-0">
+                <p class="footer__text_bold mb-0 text-center text-md-start position-relative">Plastics Engineering Company</p>
+                <p class="footer__text text-center text-md-start position-relative">3518 Lakeshore Road</p>
+                <p class="footer__text text-center text-md-start position-relative">P.O. Box 758</p>
+                <p class="footer__text text-center text-md-start position-relative">Sheboygan, WI 53082-0758</p>
+                <div class="footer__logos_wrapper_left d-none d-md-flex">
+                    <a href="facebook.com">
+                        <img src="./assets/img/svg/footer__logo_fb.svg" alt="FB" class="footer__logo">
+                    </a>
+                    <a href="facebook.com">
+                        <img src="./assets/img/svg/footer__logo_youtube.svg" alt="Youtube" class="footer__logo">
+                    </a>
+                    <a href="facebook.com">
+                        <img src="./assets/img/svg/footer__logo_linkedin.svg" alt="LinkedIn" class="footer__logo">
+                    <a>
+                </div>
+                <div class="footer__website-by_wrapper d-none d-md-flex d-flex align-items-center">
+                    <p class="footer__text footer__website-by">Website by: </p>
+                    <img src="./assets/img/svg/logo_5-color.svg" alt="Logo" class="footer__logo">
+                </div>
+            </div>
+
+            <div class="footer__logos__cont offset-0 col-12 offset-md-1 offset-lg-4 offset-xl-6 col-md-3 col-lg-3 d-flex justify-md-content-end">
+                <div class="footer__logos_wrapper_middle col-6 col-md-1 d-md-none d-flex justify-content-evenly ">
+                    <a href="facebook.com">
+                        <img src="./assets/img/svg/footer__logo_fb.svg" alt="FB" class="footer__logo">
+                    </a>
+                    <a href="facebook.com">
+                        <img src="./assets/img/svg/footer__logo_youtube.svg" alt="Youtube" class="footer__logo">
+                    </a>
+                    <a href="facebook.com">
+                        <img src="./assets/img/svg/footer__logo_linkedin.svg" alt="LinkedIn" class="footer__logo">
+                    <a>
+                </div>
+                <div class="footer__right-block col-6 col-md-9 col-lg-7 col-xl-6 offset-0 offset-md-12 offset-lg-5 offset-xl-6 d-flex flex-column">
+                    <a href="priv-policy.html" class="footer__link order-3 order-md-1 position-relative"><p class="footer__text footer__text_spec">Privacy Policy</p></a>
+                    <a href="terms-conditions.html" class="footer__link order-4 order-md-2 position-relative"><p class="footer__text">Terms & Conditions</p></a>
+                    <a href="accessibility.html" class="footer__link order-5 order-md-3 position-relative"><p class="footer__text">Accessibility</p></a>
+                    <a href="#" class="footer__link order-2 order-md-4 position-relative"><p class="footer__text_bold">Employee Login</p></a>
+                    <a href="certificate" class="footer__link order-1 order-md-5 position-relative"><p class="footer__text_bold">ISO Certificate & Certifications</p></a>
+                    
+                    <div class="footer__website-by_wrapper d-flex d-md-none align-items-center order-5">
+                        <p class="footer__text footer__website-by">Website by: </p>
+                        <img src="./assets/img/svg/logo_5-color.svg" alt="Logo" class="footer__logo">
+                    </div>
+
+                    <div class="footer__desing d-flex align-items-center justify-content-center position-absolute">
+                            <a href="plenco-wireframes.html" class="footer__design_text text-center ">Exit Design</a>
+                    </div>
+    
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src='./assets/js/layout.js'></script>
+    
+    
+
+    
+</body>
+</html>

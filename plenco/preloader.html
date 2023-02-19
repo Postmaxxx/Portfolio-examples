@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="description" content="A demo of how to use gulp-twig"/>
+    <meta name="author" content="Simon de Turck"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="./assets/css/bundle.css">
+     
+    <title>Plenco Preloader</title>
+</head>
+
+<body class="body_preloader">
+
+    <div class="layout__line_center position-fixed"></div>
+    <div class="layout__line_bottom d-md-none position-fixed"></div>
+    <div class="block_cookies collapse bg-grey-2 w-100 position-fixed py-3" data-obj="block_cookies" data-bs-toggle="false">
+    <div class="block_cookies__content container d-flex flex-column flex-md-row px-4">
+        <p class="block_cookies__text text_add col-md-8 col-lg-10 mb-3 mb-md-0 text-center text-md-start">Cookies make our site work properly and securely. By allowing us, you will 
+            get the best user experience with brand enriched content & relevant products and services. 
+        <a class="block_cookies__link text-black-1 d-block d-md-inline" href="#">More information about Cookies.</a></p>
+            
+        <div class="block_cookies__decisions ms-auto me-auto me-md-0 d-flex justify-content-center justify-content-md-between align-items-center">
+            <button class="block_cookies__btn_accept btn_cookies text-uppercase text-blue-1 ms-md-4" id="cookies_accept" data-cookieaction="accept">accept</button>
+            <button class="block_cookies__btn_close btn_cookies text-black-1 text-decoration-underline ms-4 me-4 me-xl-0" id="cookies_deny" data-cookieaction="deny">Close</button>
+        </div>
+    </div>
+    <img class="block_cookies__close d-none d-md-block col-6 col-md btn_cookies position-absolute" src="./assets/img/svg/close.svg" id="cookies_close" data-cookieaction="close">
+
+</div>
+
+    
+    
+
+    
+    <div class="preloader__content h-100 w-100 position-absolute left-0 top-0 bg-blue-3 d-flex align-items-center justify-content-center">
+        <img src="./assets/img/svg/logo_plenco_white.svg" alt="Our Logo" class="preloader__logo">
+        <a href="home.html" class="stretched-link"></a>
+    </div>
+
+
+    
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src='./assets/js/layout.js'></script>
+    
+    
+
+    
+</body>
+</html>

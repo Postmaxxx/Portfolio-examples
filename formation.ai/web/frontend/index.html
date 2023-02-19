@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="format-detection" content="telephone=no">
+
+  
+
+  <title>Foundation</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../assets/css/vendors.min.css">
+  <link rel="stylesheet" href="../assets/css/main.min.css">
+
+</head>
+
+<body class=homepage>
+      <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="index.html"  class="top-logo">
+          <span class="sr-only">Foundation logo, the link leads to the main page of the site</span> <!--//!!! WTF? -->
+                      <img src="../assets/img/top-logo.png" alt="Foundation logo">
+                  </a>
+        <nav class="nav">
+  <div class="nav__items">
+    <div class="nav__item" data-item="product">
+      <a href="product.html">Product</a>
+    </div>
+    <div class="nav__item" data-item="solutions">
+      <a href="solution.html">Solutions</a>
+    </div>    
+    <div class="nav__item" data-item="why">
+      <a href="#">Why Formation</a>
+    </div>
+    <div class="nav__item" data-item="company">
+      <a href="" style="pointer-events: none" >Company</a>
+      <div class="nav-arrow"></div>
+      <div class="nav-sub nav-sub_company">
+        <div class="nav-sub__column">
+          <h3><a href="about.html">About</a></h3>
+          <p>Small blurb about page</p>
+        </div>
+        <div class="nav-sub__column">
+          <h3><a href="#">News</a></h3>
+          <p>Small blurb about page</p>
+        </div>
+        <div class="nav-sub__column">
+          <h3><a href="#">Careers</a></h3>
+          <p>Small blurb about page, ex: “Join Us” </p>
+        </div>
+      </div>
+    </div>
+    <div class="nav__item" data-item="resources">
+      <a href="" style="pointer-events: none">Resources</a>
+      <div class="nav-arrow"></div>
+      <div class="nav-sub nav-sub_resources">
+        <div class="nav-sub__column nav-sub__column_overview">
+          <h2>Overview</h2>
+          <h3><a href="resources_overview.html">Resource Overview</a></h3>
+          <p>Read about the latest in loyalty, gamification and offers, and learn how to get your brand started.</p>
+        </div>
+        <div class="nav-sub__column">
+          <h2>Learn</h2>
+          <h3><a href="#">What is the Future of Modern Loyalty</a></h3>
+          <p>Small blurb about page</p>
+          <h3><a href="#">How to XYZ</a></h3>
+          <p>Small blurb about page</p>
+          <h3><a href="#">Dynamic</a></h3>
+          <p>Small blurb about page</p>
+          <h3><a href="#">Podcast: Loyalty Confidential</a></h3>
+          <p>Small blurb about page</p>
+        </div>
+        <div class="nav-sub__column">
+          <h2>Blog</h2>
+          <p>Check out the latest insights from Formation</p>
+          <div class="nav-sub__column__block">
+            <img src="../assets/img/mock-1.jpg" alt="Mock-1" class="nav-sub__column__block__img">
+            <h3><a href="#">Guide Name</a></h3>
+            <p>How to make personalized offers smarter & scalable</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="nav__item" data-item="community">
+      <a href="#">Community</a>
+    </div>
+  </div>
+</nav>
+
+
+
+
+<!-- hamburger-menu -->
+<div class="hamburger-menu">
+  <span class="pointer-events-none"></span>
+</div>
+
+
+
+
+<nav class="mobile-nav">
+  <div class="nav__items mobile-nav__items">
+    <div class="nav__item mobile-nav__item" data-item="product">
+      <a href="product.html">Product</a>
+    </div>
+    <div class="nav__item mobile-nav__item" data-item="solutions">
+      <a href="solution.html">Solutions</a>
+    </div>    
+    <div class="nav__item mobile-nav__item" data-item="why">
+      <a href="#">Why Formation</a>
+    </div>
+    <div class="nav__item mobile-nav__item" data-item="company">
+      <a class="" href="" style="pointer-events: none" >Company</a>
+      <div class="nav-arrow mobile-nav-arrow mobile-nav-arrow_company"></div>
+      <div class="mobile-nav-sub nav-sub_company mobile-nav-sub_company">
+        <div class="mobile-nav-sub__block">
+          <h3><a href="about.html">About</a></h3>
+          <p>Small blurb about page</p>
+        </div>
+        <div class="mobile-nav-sub__block">
+          <h3><a href="#">News</a></h3>
+          <p>Small blurb about page</p>
+        </div>
+        <div class="mobile-nav-sub__block">
+          <h3><a href="#">Careers</a></h3>
+          <p>Small blurb about page, ex: “Join Us” </p>
+        </div>
+      </div>
+    </div>
+    <div class="nav__item mobile-nav__item" data-item="resources">
+      <a class="" href="" style="pointer-events: none">Resources</a>
+      <div class="nav-arrow mobile-nav-arrow mobile-nav-arrow_resources"></div>
+      <div class="mobile-nav-sub nav-sub_resources mobile-nav-sub_resources">
+        <div class="mobile-nav-sub__block">
+          <h2>Overview</h2>
+          <h3><a href="resource_overview.html">Resource Overview</a></h3>
+          <p>Small blurb about page</p>
+        </div>
+        <div class="mobile-nav-sub__block">
+          <h2>Learn</h2>
+          <h3><a href="#">What is the Future of Modern Loyalty</a></h3>
+          <p>Small blurb about page</p>
+          <h3><a href="#">How to XYZ</a></h3>
+          <p>Small blurb about page</p>
+          <h3><a href="#">Dynamic</a></h3>
+          <p>Small blurb about page</p>
+          <h3><a href="#">Podcast: Loyalty Confidential</a></h3>
+          <p>Small blurb about page</p>
+        </div>
+        <div class="mobile-nav-sub__block">
+          <h2>Blog</h2>
+          <p>Small blurb about page, ex: “Join Us” </p>
+          <div class="mobile-nav-sub__block__block">
+            <img src="../assets/img/mock-1.jpg" alt="Mock-1" class="nav-sub__block__block__img">
+            <h3><a href="#">Guide Name</a></h3>
+            <p>Short description about guide</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="nav__item mobile-nav__item" data-item="community">
+      <a href="#">Community</a>
+    </div>
+  </div>
+</nav>        
+        <a href="#" class="btn request-btn">Request Demo</a>
+
+      </div>
+    </div>
+
+  </header>
+  
+  <main>
+    <section class="hero-block homepage">
+      <div class="container">
+        <div class="hero-inner">
+          <div class="left-part">
+          <p class="before-header">Dynamic Offer Optimization for Modern Loyalty</p>
+            <h1>Make Loyalty to your Brand an Easy Choice</h1>
+            <p class="info">In a digital, always-on world where consumers have an infinite number of choices, differentiate your brand from the sea of transactional competitors with dynamic offers rather than mass promotions.</p>
+
+            <p class="button-wrap">
+              <a href="#" class="btn request-btn">Request a Demo</a>
+              <a href="#" class="btn action-btn">See Formation in Action</a>
+            </p>
+          </div>
+
+          <div class="right-part">
+            <p class="changed-images">
+              <img src="../assets/img/homepage-hero-img-1.png" alt="">
+              <img src="../assets/img/homepage-hero-img-2.png" alt="">
+            </p>
+            <p class="bg-images">
+              <img src="../assets/img/black-circle.png" alt="">
+              <span class="first-circle"></span>
+              <span class="second-circle"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="download-wrapper">
+	<div class="container">
+		<div class="inner-block">
+			<div class="left-block">
+				<div class="left-block-inner" style="background-image: url('../assets/img/download-img.jpeg') ;">
+					<h3>Brands that adopt dynamic offers see revenue lift of up to 8%</h3>
+				</div>
+			</div>
+
+			<div class="right-block">
+				<h3>How-to make the transition from mass marketing to dynamic offers</h3>
+				<p>Learn how to power the transition from mass discounts to dynamic offers, and elevate your brand above the competition.</p>
+				<a href="#" class="btn download-btn">Download the Guide</a>
+			</div>
+		</div>
+	</div>
+</section>    
+    <section class="logo-part">
+  <div class="container">
+    <h2>Brands that have made the transition to Dynamic Offer Optimization</h2>
+    <p>More than 10B dynamic offers sent through the Formation Platform</p>
+
+    <ul class="logo-wrap">
+      <li><a href="#"><img src="../assets/img/UAL.png" alt=""></a></li>
+      <li><a href="#"><img src="../assets/img/GEL.png" alt=""></a></li>
+      <li><a href="#"><img src="../assets/img/Smiles.png" alt=""></a></li>
+    </ul>
+  </div>
+</section>
+    <section class="optimization-wrapper bg-light-gray homepage">
+  <div class="decoration-block">
+    <div class="arcs"></div>
+  </div>
+  <div class="container">
+    <div class="optimization-inner">
+      <div class="left-part">
+        <h2>Drive up to $96 Million with Dynamic Offer Optimization </h2>
+        <p class="mark">*Based on a $1B loyalty program</p>
+      </div>
+
+      <div class="right-part">
+        <ul>
+          <li>
+            <span class="percent">$80 million</span>
+            <p class="info">
+              <span class="descr">$80 million in sustainable revenue lift</span>
+            </p>
+          </li>
+          <li>
+            <span class="percent">$15 million</span>
+            <p class="info">
+              <span class="descr">$15 million in reward spend efficiency savings</span>
+            </p>
+          </li>
+          <li>
+            <span class="percent">$1 million</span>
+            <p class="info">
+              <span class="descr">$1 million in operational efficiency savings</span>
+            </p>
+          </li>
+          <li>
+            <p class="info">
+              <span class="title">Evaluate the economic impact dynamic offers can have on your busines</span>
+              <a href="#" class="btn request-btn">Calculate Now</a>
+            </p>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+    <section class="profitability-slider">
+  <div class="container">
+    <div class="profitability-slider-inner">
+      <div class="text-block">
+        <h2>Adapt to changing behaviors with dynamic offer optimization</h2>
+        <p class="after-slider-header">Machine learning continuously optimizes offers to improve AOV, frequency and reward spend that increases offer ROI</p>
+      </div>
+
+      <div class="slider-block">
+        <div class="slider-block-inner">
+        
+          <div class="owl-carousel">
+            <div class="item">
+              <span class="title">Dynamic (Unoptimized)</span>
+              <img src="../assets/img/slide1.png" alt="">
+            </div>
+
+            <div class="item">
+              <span class="title">Dynamic (Optimized)</span>
+              <img src="../assets/img/slide2.png" alt="">
+            </div>
+
+            <div class="item">
+              <span class="title">Dynamic (Optimized)</span>
+              <img src="../assets/img/slide3.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <section class="slider-wrapper slider-wrapper-second homepage" style="color: #fff;">
+	<div class="owl-carousel">
+		<div class="item" style="background-color: #789DBF;">
+			<div class="item-inner">
+				<div class="slider-part">
+					<div class="before-header">Accomplish key business objectives with dynamic offers</div>
+
+					<h2>Frequency</h2>
+
+					<div class="slider-info">
+						<div class="left-block">
+							<p class="person-image-wrapper active" data-person="oliver">
+								<img src="../assets/img/oliver-block.png" alt="">
+							</p>
+							<p class="person-image-wrapper" data-person="julie">
+								<img src="../assets/img/julie-block.png" alt="">
+							</p>
+							<p class="person-image-wrapper" data-person="eric">
+								<img src="../assets/img/eric-block.png" alt="">
+							</p>
+						</div>
+
+						<div class="right-block">
+							<div class="person-info active" data-id="oliver">
+								<a href="#">
+									<span class="photo"><img src="../assets/img/oliver.png" alt=""></span>
+									<p class="bio-wrap">
+										<span class="name">Oliver</span>
+										<span class="bio">World-traveler, shops 3-4x per year, in multiple locations</span>
+									</p>
+								</a>
+							</div>
+
+							<div class="person-info" data-id="julie">
+								<a href="#">
+									<span class="photo"><img src="../assets/img/julie.png" alt=""></span>
+									<p class="bio-wrap">
+										<span class="name">Julie</span>
+										<span class="bio">Fashionable executive, buys only luxury brands; shops 5-7x per year</span>
+									</p>
+								</a>
+							</div>
+
+							<div class="person-info" data-id="eric">
+								<a href="#">
+									<span class="photo"><img src="../assets/img/eric.png" alt=""></span>
+									<p class="bio-wrap">
+										<span class="name">Eric</span>
+										<span class="bio">Sustainability-focused worker, used to shop 3x per year, now 1x per year</span>
+									</p>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="item" style="background-color: #3361BB;">
+			<div class="item-inner">
+				<div class="slider-part">
+					<div class="before-header">Accomplish key business objectives with dynamic offers</div>
+
+					<h2>Cross-Sell</h2>
+
+					<div class="slider-info">
+						<div class="left-block">
+							<p class="person-image-wrapper active" data-person="nick">
+								<img src="../assets/img/nick-block.png" alt="">
+							</p>
+							<p class="person-image-wrapper" data-person="dara">
+								<img src="../assets/img/dara-block.png" alt="">
+							</p>
+							<p class="person-image-wrapper" data-person="gabriella">
+								<img src="../assets/img/gabriella-block.png" alt="">
+							</p>
+						</div>
+
+						<div class="right-block">
+							<div class="person-info active" data-id="nick">
+								<a href="#">
+									<span class="photo"><img src="../assets/img/nick.png" alt=""></span>
+									<p class="bio-wrap">
+										<span class="name">Nick</span>
+										<span class="bio">Footwear aficionado, shops 3-4x per year across only 1 category</span>
+									</p>
+								</a>
+							</div>
+
+							<div class="person-info" data-id="dara">
+								<a href="#">
+									<span class="photo"><img src="../assets/img/dara.png" alt=""></span>
+									<p class="bio-wrap">
+										<span class="name">Dara</span>
+										<span class="bio">Routine makeup shopper, shops 6x per year, highest spend at holidays</span>
+									</p>
+								</a>
+							</div>
+
+							<div class="person-info" data-id="gabriella">
+								<a href="#">
+									<span class="photo"><img src="../assets/img/gabriella.png" alt=""></span>
+									<p class="bio-wrap">
+										<span class="name">Gabriella</span>
+										<span class="bio">Cooking enthusiast, shops 1-2x per year, only in kitchen department</span>
+									</p>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="item" style="background-color: #15326C;">
+			<div class="item-inner">
+				<div class="slider-part">
+					<div class="before-header">Accomplish key business objectives with dynamic offers</div>
+
+					<h2>Digital Engagement</h2>
+
+					<div class="slider-info">
+						<div class="left-block">
+							<p class="person-image-wrapper active" data-person="greg">
+								<img src="../assets/img/greg-block.png" alt="">
+							</p>
+							<p class="person-image-wrapper" data-person="marc">
+								<img src="../assets/img/marc-block.png" alt="">
+							</p>
+							<p class="person-image-wrapper" data-person="cara">
+								<img src="../assets/img/cara-block.png" alt="">
+							</p>
+						</div>
+
+						<div class="right-block">
+							<div class="person-info active" data-id="greg">
+								<a href="#">
+									<span class="photo"><img src="../assets/img/greg.png" alt=""></span>
+									<p class="bio-wrap">
+										<span class="name">Greg</span>
+										<span class="bio">Outdoorsman, 1st purchase was high-ticket, never shopped again</span>
+									</p>
+								</a>
+							</div>
+
+							<div class="person-info" data-id="marc">
+								<a href="#">
+									<span class="photo"><img src="../assets/img/marc.png" alt=""></span>
+									<p class="bio-wrap">
+										<span class="name">Marc</span>
+										<span class="bio">Loyalty member, previously bought 3x per year, now only 1x per year </span>
+									</p>
+								</a>
+							</div>
+
+							<div class="person-info" data-id="cara">
+								<a href="#">
+									<span class="photo"><img src="../assets/img/cara.png" alt=""></span>
+									<p class="bio-wrap">
+										<span class="name">Cara</span>
+										<span class="bio">Mom of 3, shops 3-4x a year across multiple family categories</span>
+									</p>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+    <section class="personalization-wrapper">
+	<div class="container">
+		<div class="info">
+			<h2>Personalization at scale, at the click of a button</h2>
+
+			<p>Machine learning personalizes every customer’s offer's action, reward and difficulty based on individual customer insights without additional operational overhead.</p>
+		</div>
+	</div>
+
+	<p class="imgWrap">
+		<img src="../assets/img/personaliztion.png" alt="">
+	</p>
+</section>
+
+    <section class="footer-wrapper">
+      <div class="container">
+        <h2>Get Started for Free</h2>
+        <a href="#" class="btn request-btn">Request a Demo</a>
+      </div>
+    </section>
+  </main>
+
+  <footer></footer>
+
+  <!-- SVG-->
+    <div class="hidden">
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" xml:space="preserve">
+      <!-- search-icon -->
+      <symbol id="search-icon" viewBox="0 0 18 18">
+        <path id="Shape" d="M0,7a7,7,0,1,1,7,7A7,7,0,0,1,0,7Z" fill="#00aeef"/>
+        <path id="Path" d="M6.506,4.124,2.383,0A7.937,7.937,0,0,1,0,2.383L4.124,6.506A1.685,1.685,0,0,0,6.506,4.124Z" transform="translate(11 11)" fill="#00aeef"/>
+      </symbol>
+    </svg>
+  </div>
+  <!-- JS-->
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script src="../assets/js/vendors.min.js"></script>
+  <script src="../assets/js/jquery.sticky.min.js"></script>
+  <script src="../assets/js/common.min.js"></script>
+  <script type="module" src="../assets/js/partials/nav.min.js"></script>
+    
+</body>
+</html>
