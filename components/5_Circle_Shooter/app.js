@@ -107,7 +107,7 @@ const endGame = () => {
     time.parentNode.classList.add('hide');
     board.removeEventListener('click', boardShooted)
     buttons.forEach(btn => {btn.removeEventListener('click', startGame)})
-    const accuracy = Math.floor((score)/(score+miss)*100);
+    const accuracy = (score+miss) > 0 ? Math.floor((score)/(score+miss)*100) : 0;
     board.innerHTML = `
         <h1>Hits: <span class="primary">${score}</span></h1>
         <br>
