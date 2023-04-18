@@ -109,10 +109,10 @@ const endGame = () => {
     buttons.forEach(btn => {btn.removeEventListener('click', startGame)})
     const accuracy = Math.floor((score)/(score+miss)*100);
     board.innerHTML = `
-        <h1>Попаданий: <span class="primary">${score}</span></h1>
+        <h1>Hits: <span class="primary">${score}</span></h1>
         <br>
-        <h2>Промахов: <span class="primary ${miss === 0 ? 'no-missed' : 'missed'}">${miss}</span></h2>
-        <h2>Меткость: <span class="primary ${accuracy > 70 ? 'no-missed' : 'missed'}">${accuracy}%</span></h2>`;
+        <h2>Misses: <span class="primary ${miss === 0 ? 'no-missed' : 'missed'}">${miss}</span></h2>
+        <h2>Accuracy: <span class="primary ${accuracy > 70 ? 'no-missed' : 'missed'}">${accuracy}%</span></h2>`;
 }
 
 
